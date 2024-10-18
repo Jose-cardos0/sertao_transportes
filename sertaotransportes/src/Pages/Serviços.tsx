@@ -1,5 +1,8 @@
 import { Footer } from "../components/Footer";
 
+//icons
+import { FaCheck } from "react-icons/fa6";
+
 //images
 import onibusComil from "../assets/Servicos/onibusRodoviarioComil.png";
 import carServices from "../assets/Servicos/carsServices.png";
@@ -35,8 +38,9 @@ export function Servicos() {
             <div className="w-1/2">
               <p
                 className="font-righ 
-        text-5xl  text-white "
+        text-5xl  text-white flex gap-2"
               >
+                <FaCheck />
                 Transporte de passageiros;
               </p>{" "}
               <br />
@@ -78,10 +82,14 @@ export function Servicos() {
             <div className="w-1/2">
               <p
                 className="font-righ 
-        text-5xl  text-white "
+        text-5xl  text-white flex gap-2 "
               >
-                Terceirização da frota. <br />
-                Locação de veículos;
+                <p>
+                  <FaCheck /> Terceirização da frota.
+                </p>
+                <p>
+                  <FaCheck /> Locação de veículos;
+                </p>
               </p>{" "}
               <br />
               <p
