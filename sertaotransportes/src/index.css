@@ -7,3 +7,22 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.animated-bg {
+  background: linear-gradient(90deg, #0e578d, #2d8fbc, transparent);
+  background-size: 150% 150%;
+  animation: gradientFlow 6s ease;
+  color: white;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
