@@ -33,7 +33,8 @@ export function Header() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="absolute top-16 flex gap-10 left-0 right-0
-             bg-custom-blue-light min-w-full min-h-11 items-center bg-opacity-50"
+             bg-custom-blue-light min-w-full min-h-11
+              items-center bg-opacity-50 z-50"
           >
             <Link to={"/nossa-historia"}>
               <button
@@ -57,7 +58,9 @@ export function Header() {
           <Link to={"/home"}>
             <button>Home</button>
           </Link>
-          <button>Serviços</button>
+          <Link to={"/servicos"}>
+            <button>Serviços</button>
+          </Link>
           <button>Certificados</button>
           <button>Trabalhe Conosco</button>
           <button>Contato</button>

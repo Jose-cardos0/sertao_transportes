@@ -17,6 +17,10 @@ const router = createBrowserRouter([
     element: <Welcome />,
   },
   {
+    path: "/servicos",
+    element: <Servicos />,
+  },
+  {
     element: <Layout />,
     children: [
       {
@@ -31,10 +35,7 @@ const router = createBrowserRouter([
         path: "/institucional",
         element: <Institucional />,
       },
-      {
-        path: "/servicos",
-        element: <Servicos />,
-      },
+
       {
         path: "certificados",
         element: <Certificados />,
