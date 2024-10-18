@@ -18,6 +18,9 @@ export default {
         "custom-blue-dark": "#00497E",
         "custom-blue-light": "#296693",
       },
+      minHeight: {
+        "height-full-16px": "calc(100vh - 64px)",
+      },
     },
   },
   plugins: [],
