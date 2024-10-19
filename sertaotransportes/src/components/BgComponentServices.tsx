@@ -5,10 +5,12 @@ import bgBottom from "../assets/Servicos/bgBottom.svg";
 //animate
 import { motion } from "framer-motion";
 
+//pages
+import { Footer } from "./Footer";
 export function BgComponentServices() {
   return (
     <main
-      style={{ backgroundColor: "#D2E2EC" }}
+      style={{ backgroundColor: "#ffff" }}
       className=" inset-0 z-0
       min-w-full min-h-height-full-16px "
     >
@@ -17,8 +19,8 @@ export function BgComponentServices() {
           initial={{ x: "-100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 2, ease: "easeInOut" }}
-          className="absolute inset-0 z-0
-        min-h-height-full-16px"
+          className="absolute inset-0 z-10
+        min-h-height-full-16px "
           src={bgtop}
           alt="bgtop"
         />
@@ -32,6 +34,9 @@ export function BgComponentServices() {
           alt="bgBottom"
         />
       </div>
+      <footer className="bg-white flex justify-end items-baseline z-50">
+        <Footer />
+      </footer>
     </main>
   );
 }

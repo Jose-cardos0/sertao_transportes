@@ -1,29 +1,33 @@
-import { Footer } from "../components/Footer";
-
 //icons
 import { FaCheck } from "react-icons/fa6";
+
+//motions
+import { motion, useScroll, useTransform } from "framer-motion";
 
 //images
 import onibusComil from "../assets/Servicos/onibusRodoviarioComil.png";
 import carServices from "../assets/Servicos/carsServices.png";
+import escolar from "../assets/Servicos/escolar.png";
+import pesados from "../assets/Servicos/maquinarioPesado.png";
+import trator from "../assets/Servicos/trator.png";
 
 //composntes
 import { Header } from "../components/Header";
 import { BgComponentServices } from "../components/BgComponentServices";
 
 export function Servicos() {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 500], [0, 100]);
+
   return (
     <main
       style={{ backgroundColor: "#D2E2EC" }}
       className="min-w-full min-h-height-full-16px relative"
     >
-      {/* Div para o fundo com o componente */}
       <div className="absolute inset-0 z-0">
         <BgComponentServices />
       </div>
-
-      {/* Div para o conteúdo que ficará por cima */}
-      <div className="relative flex-col z-10 ">
+      <div className="relative flex-col z-10 flex-grow ">
         <Header />
         <section className="ml-12 mt-10 flex-col items-center justify-center">
           <h1
@@ -34,7 +38,13 @@ export function Servicos() {
           </h1>
           {/*divs com items */}
           {/*divs transportes e passageiros */}
-          <div className="flex items-center justify-between">
+          <motion.div
+            style={{
+              y,
+              opacity: useTransform(scrollY, [0, 500], [1, 0]),
+            }}
+            className="flex items-center justify-between mt-20 "
+          >
             <div className="w-1/2">
               <p
                 className="font-righ 
@@ -76,18 +86,24 @@ export function Servicos() {
               sertão transportes"
               />
             </div>
-          </div>
+          </motion.div>
           {/*divs terceirização da frota */}
-          <div className="flex items-center justify-between">
+          <motion.div
+            style={{
+              y,
+              opacity: useTransform(scrollY, [800, 0], [1, 0]),
+            }}
+            className="flex items-center justify-between my-32"
+          >
             <div className="w-1/2">
               <p
                 className="font-righ 
-        text-5xl  text-white flex gap-2 "
+        text-5xl  text-white flex-col "
               >
-                <p>
+                <p className="flex gap-2">
                   <FaCheck /> Terceirização da frota.
                 </p>
-                <p>
+                <p className="flex gap-2">
                   <FaCheck /> Locação de veículos;
                 </p>
               </p>{" "}
@@ -166,14 +182,171 @@ export function Servicos() {
               sertão transportes"
               />
             </div>
-          </div>
+          </motion.div>
+          {/*divs transporte escolar */}
+          <motion.div className="flex items-center justify-between my-48">
+            <div className="w-1/2">
+              <p
+                className="font-righ 
+        text-5xl  text-white flex gap-2"
+              >
+                <FaCheck />
+                Transporte escolar;
+              </p>{" "}
+              <br />
+              <p
+                className="font-righ 
+        text-5xl  text-white "
+              >
+                • Ônibus
+              </p>
+              <br />
+              <p
+                className="font-righ 
+        text-5xl  text-white "
+              >
+                • Microônibus
+              </p>
+              <br />
+              <p
+                className="font-righ 
+        text-5xl  text-white "
+              >
+                • Vans
+              </p>
+            </div>
+            <div
+              className="w-1/2 flex items-center 
+            justify-center"
+            >
+              <img
+                className="w-3/4"
+                src={escolar}
+                alt="Onibus 
+              sertão transportes"
+              />
+            </div>
+          </motion.div>
+          {/*divs transporte pesados */}
+          <motion.div className="flex items-center justify-between my-36">
+            <div
+              className="w-1/2 flex items-center 
+            justify-center"
+            >
+              <img
+                className="w-3/4"
+                src={pesados}
+                alt="Onibus 
+              sertão transportes"
+              />
+            </div>
+            <div className="w-1/2">
+              <p
+                className="font-righ 
+        text-5xl  text-white flex gap-2"
+              >
+                <FaCheck />
+                Locação de máquinas e <br />
+                equipamentos;
+              </p>{" "}
+              <br />
+              <p
+                className="font-righ 
+        text-5xl  text-white "
+              >
+                • Escavadeira hidráulica
+              </p>
+              <br />
+              <p
+                className="font-righ 
+        text-5xl  text-white "
+              >
+                • Retroescavadeira
+              </p>
+              <br />
+              <p
+                className="font-righ 
+        text-5xl  text-white "
+              >
+                • Pá carregadeira
+              </p>
+              <br />
+              <p
+                className="font-righ 
+        text-5xl  text-white "
+              >
+                • Motoniveladora (Patrol)
+              </p>
+              <br />
+              <p
+                className="font-righ 
+        text-5xl  text-white "
+              >
+                • Rolo compactador
+              </p>
+            </div>
+          </motion.div>
+          {/*divs transporte trator */}
+          <motion.div className="flex items-center justify-between my-72">
+            <div
+              className="w-1/2 flex items-center 
+            justify-center"
+            >
+              <img
+                className="w-3/4"
+                src={trator}
+                alt="Onibus 
+              sertão transportes"
+              />
+            </div>
+            <div className="w-1/2">
+              <p
+                className="font-righ 
+        text-5xl  text-white flex gap-2"
+              >
+                <FaCheck />
+                Locação de máquinas e <br />
+                equipamentos;
+              </p>{" "}
+              <br />
+              <p
+                className="font-righ 
+        text-5xl  text-white "
+              >
+                • Escavadeira hidráulica
+              </p>
+              <br />
+              <p
+                className="font-righ 
+        text-5xl  text-white "
+              >
+                • Retroescavadeira
+              </p>
+              <br />
+              <p
+                className="font-righ 
+        text-5xl  text-white "
+              >
+                • Pá carregadeira
+              </p>
+              <br />
+              <p
+                className="font-righ 
+        text-5xl  text-white "
+              >
+                • Motoniveladora (Patrol)
+              </p>
+              <br />
+              <p
+                className="font-righ 
+        text-5xl  text-white "
+              >
+                • Rolo compactador
+              </p>
+            </div>
+          </motion.div>
         </section>
       </div>
-
-      {/* Se você quiser incluir o Footer, pode fazer isso aqui */}
-      <footer className="bg-white flex items-end justify-end">
-        <Footer />
-      </footer>
     </main>
   );
 }
