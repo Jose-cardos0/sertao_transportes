@@ -15,15 +15,19 @@ export function Header() {
       className="min-w-full bg-custom-blue-dark min-h-16 flex items-center justify-between shadow-xl
      drop-shadow-xl z-50"
     >
-      <div className="flex w-full items-center justify-between mx-10 font-robotoC text-white">
+      <div
+        className="flex w-full items-center justify-between
+       mx-10 font-robotoC text-white"
+      >
         <button
-          className={`relative px-3 py-1 font-robotoC flex items-center justify-center ${
-            isOpen == true ? "bg-custom-blue-light rounded-md " : ""
-          }`}
+          className={`relative px-3 py-1 font-robotoC flex items-center
+             justify-center ${
+               isOpen == true ? "bg-custom-blue-light rounded-md " : ""
+             }`}
           onClick={() => setIsOpen((prev) => !prev)}
         >
           <div className="mr-4">
-            <img className="w-20" src={logoHeader} alt="" />
+            <img className="w-20" src={logoHeader} alt="sertão transportes" />
           </div>
           Conheça a Sertão Transportes
         </button>
@@ -39,7 +43,7 @@ export function Header() {
             <Link to={"/nossa-historia"}>
               <button
                 onClick={() => setIsOpen((prev) => !prev)}
-                className="ml-10 font-robotoC cursor-pointer hover:text-black "
+                className="ml-10 font-robotoC cursor-pointer hover:text-black z-50"
               >
                 Nossa História
               </button>{" "}
@@ -47,23 +51,52 @@ export function Header() {
             <Link to={"/institucional"}>
               <button
                 onClick={() => setIsOpen((prev) => !prev)}
-                className="font-robotoC cursor-pointer hover:text-black "
+                className="font-robotoC cursor-pointer hover:text-black  z-50"
               >
                 Institucional
               </button>
             </Link>
           </motion.div>
         )}
-        <ul className="flex gap-20">
+        <ul className="flex gap-5">
           <Link to={"/home"}>
-            <button>Home</button>
+            <button
+              className="relative px-2 py-1 font-robotoC flex items-center
+             justify-center hover:bg-custom-blue-light rounded-md"
+            >
+              Home
+            </button>
           </Link>
           <Link to={"/servicos"}>
-            <button>Serviços</button>
+            <button
+              className="relative px-2 py-1 font-robotoC flex items-center
+             justify-center hover:bg-custom-blue-light rounded-md"
+            >
+              Serviços
+            </button>
           </Link>
-          <button>Certificados</button>
-          <button>Trabalhe Conosco</button>
-          <button>Contato</button>
+          <button
+            className="relative px-2 py-1 font-robotoC flex items-center
+             justify-center hover:bg-custom-blue-light rounded-md"
+          >
+            Certificados
+          </button>
+          <Link to={"/trabalhe-conosco"}>
+            <button
+              className="relative px-2 py-1 font-robotoC flex items-center
+             justify-center hover:bg-custom-blue-light rounded-md"
+            >
+              Trabalhe Conosco
+            </button>
+          </Link>
+          <Link to={"/contato"}>
+            <button
+              className="relative px-2 py-1 font-robotoC flex items-center
+             justify-center hover:bg-custom-blue-light rounded-md"
+            >
+              Contato
+            </button>
+          </Link>
         </ul>
       </div>
     </header>

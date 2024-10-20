@@ -10,7 +10,7 @@ import { Footer } from "./Footer";
 export function BgComponentServices() {
   return (
     <main
-      style={{ backgroundColor: "#ffff" }}
+      style={{ backgroundColor: "#D2E2EC" }}
       className=" inset-0 z-0
       min-w-full min-h-height-full-16px "
     >
@@ -19,7 +19,7 @@ export function BgComponentServices() {
           initial={{ x: "-100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 2, ease: "easeInOut" }}
-          className="absolute inset-0 z-10
+          className="absolute inset-0 z-10  bg-cover -ml-5
         min-h-height-full-16px "
           src={bgtop}
           alt="bgtop"
@@ -29,7 +29,7 @@ export function BgComponentServices() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 2, ease: "easeInOut" }}
           className=" 
-          min-h-height-full-16px"
+          min-h-height-full-16px bg-cover"
           src={bgBottom}
           alt="bgBottom"
         />
