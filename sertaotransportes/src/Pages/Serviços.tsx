@@ -34,7 +34,7 @@ export function Servicos() {
       <div className="relative flex-col z-10 flex-grow ">
         <Header />
         <section className="ml-12 mt-10 flex-col items-center justify-center">
-          <h1 className="font-righ text-5xl uppercase text-white">
+          <h1 className="font-righ text-5xl uppercase text-white mm:max-md:text-custom-blue-dark">
             nossos serviços
           </h1>
           {/* Transporte de passageiros */}
@@ -113,13 +113,16 @@ const ServiceSection = ({ title, items, imageSrc }: PropsDados) => {
       className="flex items-center justify-between my-32"
     >
       <div className="w-1/2">
-        <p className="font-righ text-5xl text-white flex gap-2">
+        <p className="font-righ text-5xl text-white flex gap-2 mm:max-md:text-xl mm:max-md:text-custom-blue-dark">
           <FaCheck />
           {title};
         </p>
         <br />
         {items.map((item, index) => (
-          <p key={index} className="font-righ text-5xl text-white">
+          <p
+            key={index}
+            className="font-righ text-5xl text-white mm:max-md:text-xl mm:max-md:text-custom-blue-dark"
+          >
             • {item}
           </p>
         ))}

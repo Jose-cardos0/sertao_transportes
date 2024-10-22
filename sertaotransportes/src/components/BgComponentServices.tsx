@@ -34,7 +34,7 @@ export function BgComponentServices() {
           alt="bgBottom"
         />
       </div>
-      <footer className="bg-white flex justify-end items-baseline z-50 mm:max-md:hidden">
+      <footer className="bg-white flex justify-end items-baseline z-50 mm:max-md:absolute">
         <Footer />
       </footer>
     </main>
