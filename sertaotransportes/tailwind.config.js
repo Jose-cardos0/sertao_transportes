@@ -22,6 +22,13 @@ export default {
         "height-full-16px": "calc(100vh - 64px)",
       },
     },
+    screens: {
+      mm: "320px", // 'min-width
+      sm: "480px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
+    },
   },
   plugins: [],
 };

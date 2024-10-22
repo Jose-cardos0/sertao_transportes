@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 //motion
 import { motion } from "framer-motion";
 //images
@@ -8,11 +8,22 @@ import vanSertao from "../assets/institucional/vanSertao.png";
 export function Institucional() {
   const [animationStep, setAnimationStep] = useState(0);
   const [motionStepVan, setAnimationStepVan] = useState(0);
+  const [isWidth, setIsWidth] = useState<boolean>();
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 480) {
+        setIsWidth(true);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <main className="animated-bg min-h-height-full-16px w-full flex items-center justify-center">
-      <section className="flex justify-between items-center min-w-full min-h-full overflow-hidden ">
-        <div className="h-full w-1/2 flex-col ml-16 ">
+      <section className="flex justify-between items-center min-w-full min-h-full overflow-hidden mm:max-md:flex-col ">
+        <div className="h-full w-1/2 flex-col ml-16 mm:max-md:w-full mm:max-md:ml-0 mm:max-md:px-4  ">
           <motion.div
             initial={{ x: "-100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -23,7 +34,7 @@ export function Institucional() {
               }
             }}
           >
-            <h1 className="font-righ text-5xl uppercase text-white">
+            <h1 className="font-righ text-5xl uppercase text-white mm:max-md:mt-10">
               institucional
             </h1>
           </motion.div>
@@ -53,12 +64,45 @@ export function Institucional() {
               </motion.p>
             )}
             <br />
+            {isWidth === true ? (
+              <>
+                <aside className="flex min-h-full items-center justify-center ">
+                  <div className="w-full h-full bg-cover bg-center relative flex ">
+                    <motion.img
+                      initial={{ x: "100%", opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ duration: 1, ease: "easeInOut" }}
+                      onAnimationComplete={() => {
+                        if (motionStepVan === 0) {
+                          setAnimationStepVan(1);
+                        }
+                      }}
+                      className="w-full items-center justify-center"
+                      src={elipse}
+                      alt="caminhão caçamba sertão transportes cover"
+                    />
+                    {motionStepVan >= 1 && (
+                      <motion.img
+                        initial={{ x: "100%", opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 1, ease: "easeInOut" }}
+                        className="absolute top-24 drop-shadow-2xl w-full "
+                        src={vanSertao}
+                        alt=""
+                      />
+                    )}
+                  </div>
+                </aside>
+              </>
+            ) : (
+              ""
+            )}
             {animationStep >= 2 && (
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1, ease: "easeInOut" }}
-                className="font-robotoC text-2xl text-white text-justify"
+                className="font-robotoC text-2xl text-white text-justify mm:max-md:mb-20"
               >
                 VISÃO: Ser reconhecida em diversas regiões do território
                 nacional como referência em transporte, mantendo-se em constante
@@ -79,7 +123,7 @@ export function Institucional() {
           </div>
         </div>
         <aside className="flex min-h-full items-end justify-end ">
-          <div className="w-full h-full bg-cover bg-center relative flex mr-20 ">
+          <div className="w-full h-full bg-cover bg-center relative flex mr-20 mm:max-md:hidden   ">
             <motion.img
               initial={{ x: "100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}

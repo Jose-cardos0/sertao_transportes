@@ -19,15 +19,15 @@ export function TrabalheConosco() {
     >
       <section
         className="flex-grow items-center
-       justify-end mt-10  z-0"
+       justify-end mt-10 z-0  "
       >
         <motion.div
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
-          <div className="flex items-center justify-end  ">
-            <div className="w-2/3 ml-12 items-center flex justify-center">
+          <div className="flex items-center justify-end mm:max-md:flex-col ">
+            <div className="w-2/3 ml-12 items-center flex justify-center mm:max-md:w-full mm:max-md:ml-0">
               <h1 className="font-righ text-2xl  uppercase text-white ">
                 trabalhe conosco <br />
                 nos envie um currículo! <br />
@@ -38,7 +38,7 @@ export function TrabalheConosco() {
             </div>
             <div
               style={{ backgroundImage: `url(${trabalheConosco})` }}
-              className="w-1/2
+              className="w-1/2 mm:max-md:w-full
                "
             >
               <img
@@ -51,7 +51,7 @@ export function TrabalheConosco() {
         </motion.div>
       </section>
       <Link to={"/"}>
-        <div className="min-w-full bg-white flex justify-end items-end z-10">
+        <div className="min-w-full bg-white flex justify-end items-end z-10 ">
           <Footer />
         </div>
       </Link>

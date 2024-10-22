@@ -14,19 +14,22 @@ export function Home() {
       }}
       className=" min-h-height-full-16px 
       min-w-full bg-cover
-       bg-no-repeat
-        bg-center flex overflow-y-hidden overflow-x-hidden z-10"
+      bg-no-repeat
+      bg-center flex
+      overflow-y-hidden overflow-x-hidden"
     >
       <motion.div
         initial={{ x: "100%", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="flex relative"
+        className="flex relative z-0 "
       >
         <h1
           className="absolute w-screen
        text-white font-righ text-5xl
-        flex items-center justify-start left-11 min-h-height-full-16px mt-10  "
+        flex items-center justify-start
+         left-11 min-h-height-full-16px mt-10 z-0 mm:max-md:text-sm mm:max-md:z-50 mm:max-md:w-60 mm:max-md:pb-20 mm:max-md:left-2
+         "
         >
           EMPRESA ESPECIALIZADA <br /> EM FORNECER SOLUÇÕES <br /> TRANSPORTE
           PARA DIVERSAS <br /> NECESSODADES <br />
@@ -39,7 +42,8 @@ export function Home() {
       <div
         style={{ backgroundImage: `url(${artOct})` }}
         className="min-h-height-full-16px
-         bg-cover bg-no-repeat w-full flex items-center "
+         bg-cover bg-no-repeat w-full flex
+          items-center mm:max-md:hidden "
       ></div>
 
       <motion.div
@@ -54,7 +58,7 @@ export function Home() {
           style={{ backgroundImage: `url(${triangleCars})` }}
           className="min-h-height-full-16px
            bg-no-repeat w-1/2 flex 
-           drop-shadow-2xl bg-cover "
+           drop-shadow-2xl bg-cover  "
         ></div>
       </motion.div>
     </main>

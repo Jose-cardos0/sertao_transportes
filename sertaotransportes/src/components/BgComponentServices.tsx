@@ -20,7 +20,7 @@ export function BgComponentServices() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 2, ease: "easeInOut" }}
           className="absolute inset-0 z-10  bg-cover -ml-5
-        min-h-height-full-16px "
+        min-h-height-full-16px mm:max-md:hidden"
           src={bgtop}
           alt="bgtop"
         />
@@ -29,12 +29,12 @@ export function BgComponentServices() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 2, ease: "easeInOut" }}
           className=" 
-          min-h-height-full-16px bg-cover"
+          min-h-height-full-16px bg-cover mm:max-md:hidden"
           src={bgBottom}
           alt="bgBottom"
         />
       </div>
-      <footer className="bg-white flex justify-end items-baseline z-50">
+      <footer className="bg-white flex justify-end items-baseline z-50 mm:max-md:hidden">
         <Footer />
       </footer>
     </main>
