@@ -18,7 +18,7 @@ A ideia central do site é simples, porém sofisticada, com um design limpo que 
 
 ![image](https://github.com/user-attachments/assets/5281dc7a-07bc-46b9-8460-53c82a20d213) <br/>
 ![image](https://github.com/user-attachments/assets/a4faf044-90d9-4099-a9e9-89eaa86edec4) <br/>
-![image](https://github.com/user-attachments/assets/e0880a03-a187-41a2-85ed-d2b59dd5293a) ![image](https://github.com/user-attachments/assets/e3a8dec7-1630-49aa-9a2a-02d530363c42)![image](https://github.com/user-attachments/assets/b531ab80-8a36-44d1-b112-85bcbbc3d91b)
+![image](https://github.com/user-attachments/assets/e3a8dec7-1630-49aa-9a2a-02d530363c42)![image](https://github.com/user-attachments/assets/b531ab80-8a36-44d1-b112-85bcbbc3d91b)
 
 
 
