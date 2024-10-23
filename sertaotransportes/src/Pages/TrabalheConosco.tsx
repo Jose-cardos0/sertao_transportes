@@ -15,11 +15,11 @@ export function TrabalheConosco() {
       className="animated-bg w-full
      flex-col items-center 
      justify-center overflow-hidden
-      min-h-height-full-16px"
+      min-h-height-full-16px "
     >
       <section
         className="flex-grow items-center
-       justify-end mt-10 z-0  "
+       justify-end mt-10 z-0 mm:max-md:h-screen   "
       >
         <motion.div
           initial={{ x: "100%", opacity: 0 }}
@@ -31,9 +31,11 @@ export function TrabalheConosco() {
               <h1 className="font-righ text-2xl  uppercase text-white ">
                 trabalhe conosco <br />
                 nos envie um currículo! <br />
-                <p className="font-righ text-lg text-red-400 lowercase">
-                  contato@sertaoturismo.com.br
-                </p>
+                <a href="#">
+                  <p className="font-righ text-lg text-red-400 lowercase">
+                    contato@sertaoturismo.com.br
+                  </p>
+                </a>
               </h1>
             </div>
             <div
@@ -42,7 +44,7 @@ export function TrabalheConosco() {
                "
             >
               <img
-                className="min-w-screen flex items-end justify-end "
+                className="min-w-screen flex items-end justify-end mm:max-md:mt-20 "
                 src={trabalheConosco}
                 alt="trabalhe conosco sertao transportes"
               />
@@ -51,7 +53,11 @@ export function TrabalheConosco() {
         </motion.div>
       </section>
       <Link to={"/"}>
-        <div className="min-w-full bg-white flex justify-end items-end z-10 ">
+        <div
+          className="min-w-full
+         bg-white flex justify-end 
+         items-end z-10   "
+        >
           <Footer />
         </div>
       </Link>

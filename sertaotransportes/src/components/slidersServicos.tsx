@@ -13,12 +13,15 @@ import slider3 from "../assets/slidersServicesMobile/slider3.png";
 import slider4 from "../assets/slidersServicesMobile/slider4.png";
 import slider5 from "../assets/slidersServicesMobile/slider5.png";
 
+//icons
+import { IoLogoWhatsapp } from "react-icons/io";
+
 //components
 import footer from "../assets/footer/footer.png";
 
 export function SlidersServicos() {
   return (
-    <div className="flex-col items-center justify-center mt-14">
+    <div className="flex-col items-center justify-center mt-28">
       <Swiper
         modules={[Pagination, Navigation, Scrollbar, Autoplay]}
         spaceBetween={30}
@@ -34,28 +37,28 @@ export function SlidersServicos() {
         <div className="flex items-center justify-center ">
           <SwiperSlide>
             <img
-              className="drop-shadow-md w-full"
+              className="drop-shadow-md w-full mt-5"
               src={slider1}
               alt="serviços sertão transportes"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="drop-shadow-md w-full"
+              className="drop-shadow-md w-full mb-7"
               src={slider2}
               alt="serviços sertão transportes"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="drop-shadow-md w-full"
+              className="drop-shadow-md w-full mt-5"
               src={slider3}
               alt="serviços sertão transportes"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="drop-shadow-md w-full mm:max-md:-ml-8"
+              className="drop-shadow-md w-full mm:max-md:-ml-8 mt-5"
               src={slider4}
               alt="serviços sertão transportes"
             />
@@ -69,7 +72,20 @@ export function SlidersServicos() {
           </SwiperSlide>
         </div>
       </Swiper>
-      <div className="bg-white ">
+      <div className="w-full flex items-center justify-center px-10 pt-3">
+        <button
+          className="flex items-center
+         justify-center gap-2 bg-white px-5
+          rounded-xl shadow-md
+           shadow-black cursor-pointer
+            hover:bg-custom-blue-dark
+             hover:text-white transition duration-300 animate-bounce"
+        >
+          <strong>CONTATE-NOS</strong>
+          <IoLogoWhatsapp size={40} color="green" />
+        </button>
+      </div>
+      <div className="bg-white mm:max-md:mt-5">
         <img className="h-32" src={footer} alt="sertão transportes" />
       </div>
     </div>

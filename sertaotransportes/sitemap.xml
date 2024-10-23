@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Página inicial -->
+  <url>
+    <loc>https://www.sertaotransportes.com.br/</loc>
+    <lastmod>2024-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Página de Serviços -->
+  <url>
+    <loc>https://www.sertaotransportes.com.br/servicos</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Página de home -->
+  <url>
+    <loc>https://www.sertaotransportes.com.br/home</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Página de nossa-historia -->
+  <url>
+    <loc>https://www.sertaotransportes.com.br/nossa-historia</loc>
+    <lastmod>2024-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Página insitucional -->
+  <url>
+    <loc>https://www.sertaotransportes.com.br/institucional</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Página de certificado (se existir) -->
+  <url>
+    <loc>https://www.sertaotransportes.com.br/certificado</loc>
+    <lastmod>2024-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Página de trabalhe cosnoco -->
+  <url>
+    <loc>https://www.sertaotransportes.com.br/trabalhe-conosco</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+   <!-- Página de contato -->
+  <url>
+    <loc>https://www.sertaotransportes.com.br/contato</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
