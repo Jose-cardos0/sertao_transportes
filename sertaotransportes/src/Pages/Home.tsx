@@ -16,7 +16,8 @@ export function Home() {
       min-w-full bg-cover
       bg-no-repeat
       bg-center flex
-      overflow-y-hidden overflow-x-hidden"
+      overflow-y-hidden
+       overflow-x-hidden "
     >
       <motion.div
         initial={{ x: "100%", opacity: 0 }}
@@ -28,7 +29,10 @@ export function Home() {
           className="absolute w-screen
        text-white font-righ text-5xl
         flex items-center justify-start
-         left-11 min-h-height-full-16px mt-10 z-0 mm:max-md:text-sm mm:max-md:z-50 mm:max-md:w-60 mm:max-md:pb-20 mm:max-md:left-2
+        left-11 min-h-height-full-16px
+        mt-10 z-0 mm:max-md:text-sm
+        mm:max-md:z-50 mm:max-md:w-60
+        mm:max-md:left-2  
          "
         >
           EMPRESA ESPECIALIZADA <br /> EM FORNECER SOLUÇÕES <br /> TRANSPORTE
