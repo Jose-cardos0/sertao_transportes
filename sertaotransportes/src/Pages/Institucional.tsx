@@ -48,7 +48,7 @@ export function Institucional() {
                 onAnimationComplete={() => {
                   setAnimationStep(2);
                 }}
-                className="font-robotoC text-2xl text-white text-justify"
+                className="font-robotoC text-2xl text-white text-justify mm:max-md:text-base "
               >
                 Sertão Transportes é uma empresa especializada em oferecer
                 soluções inteligentes de transporte, sempre priorizando
@@ -102,7 +102,7 @@ export function Institucional() {
                 initial={{ opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1, ease: "easeInOut" }}
-                className="font-robotoC text-2xl text-white text-justify mm:max-md:mb-20"
+                className="font-robotoC text-2xl text-white text-justify mm:max-md:mb-20 mm:max-md:text-base"
               >
                 VISÃO: Ser reconhecida em diversas regiões do território
                 nacional como referência em transporte, mantendo-se em constante

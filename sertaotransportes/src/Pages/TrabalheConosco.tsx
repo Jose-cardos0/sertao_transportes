@@ -1,5 +1,3 @@
-import { Footer } from "../components/Footer";
-
 //motion
 import { motion } from "framer-motion";
 
@@ -8,6 +6,7 @@ import { Link } from "react-router-dom";
 
 //images
 import trabalheConosco from "../assets/trabalheConosco/trabalheConosco.png";
+import FooterPng from "../assets/footer/footer.png";
 
 export function TrabalheConosco() {
   return (
@@ -19,7 +18,7 @@ export function TrabalheConosco() {
     >
       <section
         className="flex-grow items-center
-       justify-end mt-10 z-0 mm:max-md:h-screen   "
+       justify-end mt-10 z-0    "
       >
         <motion.div
           initial={{ x: "100%", opacity: 0 }}
@@ -27,24 +26,28 @@ export function TrabalheConosco() {
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <div className="flex items-center justify-end mm:max-md:flex-col ">
-            <div className="w-2/3 ml-12 items-center flex justify-center mm:max-md:w-full mm:max-md:ml-0">
+            <div
+              className="w-2/3 ml-12 items-center flex justify-center
+             mm:max-md:ml-0 mm:max-md:mb-11"
+            >
               <h1 className="font-righ text-2xl  uppercase text-white ">
                 trabalhe conosco <br />
                 nos envie um currículo! <br />
                 <a href="#">
                   <p className="font-righ text-lg text-red-400 lowercase">
-                    contato@sertaoturismo.com.br
+                    <a href="https://www.google.com/" target="_blanck">
+                      contato@sertaoturismo.com.br
+                    </a>
                   </p>
                 </a>
               </h1>
             </div>
             <div
-              style={{ backgroundImage: `url(${trabalheConosco})` }}
               className="w-1/2 mm:max-md:w-full
                "
             >
               <img
-                className="min-w-screen flex items-end justify-end mm:max-md:mt-20 "
+                className="min-w-screen flex items-end justify-end "
                 src={trabalheConosco}
                 alt="trabalhe conosco sertao transportes"
               />
@@ -53,12 +56,8 @@ export function TrabalheConosco() {
         </motion.div>
       </section>
       <Link to={"/"}>
-        <div
-          className="min-w-full
-         bg-white flex justify-end 
-         items-end z-10   "
-        >
-          <Footer />
+        <div>
+          <img src={FooterPng} alt="sertão transportes" />
         </div>
       </Link>
     </main>

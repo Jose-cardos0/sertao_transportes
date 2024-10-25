@@ -1,4 +1,4 @@
-import { Footer } from "../components/Footer";
+import FooterPng from "../assets/footer/footer.png";
 
 //motion
 import { motion } from "framer-motion";
@@ -17,10 +17,10 @@ export function Contato() {
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="mx-12 mb-20 mt-10 mm:max-md:h-screen"
+          className="mx-12 mb-20 mt-16"
         >
           <h1 className="font-righ text-5xl uppercase text-white">CONTATO</h1>
-          <form className="min-w-full mt-5 ">
+          <form className="min-w-full mt-5  ">
             <label>
               <p className="font-righ text-lg">Nome:</p>
               <input
@@ -58,8 +58,8 @@ export function Contato() {
           </form>
         </motion.div>
         <Link to={"/"}>
-          <div className="w-full bg-white flex items-end justify-end ">
-            <Footer />
+          <div>
+            <img src={FooterPng} alt="sertão transportes" />
           </div>
         </Link>
       </section>

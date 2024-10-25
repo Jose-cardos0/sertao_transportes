@@ -26,7 +26,7 @@ export function NossaHistoria() {
               initial={{ x: "100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
-              className="font-robotoC text-2xl text-white text-justify"
+              className="font-robotoC text-2xl text-white text-justify mm:max-md:text-base"
             >
               Nossa história teve início em 2011 quando fundamos a Sertão
               Turismo (atualmente Sertão Transportes) e compramos os primeiros{" "}
@@ -41,7 +41,7 @@ export function NossaHistoria() {
               initial={{ x: "100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
-              className="font-robotoC text-2xl text-white text-justify"
+              className="font-robotoC text-2xl text-white text-justify mm:max-md:text-base"
             >
               No ano de 2014 iniciamos a diversificação dos nossos serviços,{" "}
               passando a atuar no ramo da locação de veículos. Em 2017 a empresa

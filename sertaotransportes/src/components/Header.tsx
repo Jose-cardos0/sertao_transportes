@@ -42,13 +42,17 @@ export function Header() {
               )}
             </button>
             <Link to={"/"}>
-              <div>
+              <motion.div
+                initial={{ x: "100%", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+              >
                 <img
                   className="w-20"
                   src={logoHeader}
                   alt="sertão transportes"
                 />
-              </div>
+              </motion.div>
             </Link>
             {isOpen && (
               <motion.div
@@ -148,13 +152,18 @@ export function Header() {
              }`}
               onClick={() => setIsOpen((prev) => !prev)}
             >
-              <div className="mr-4">
+              <motion.div
+                initial={{ x: "100%", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                className="mr-4"
+              >
                 <img
                   className="w-20"
                   src={logoHeader}
                   alt="sertão transportes"
                 />
-              </div>
+              </motion.div>
               Conheça a Sertão Transportes
             </button>
             {isOpen && (

@@ -30,16 +30,16 @@ export function Home() {
        text-white font-righ text-5xl
         flex items-center justify-start
         left-11 min-h-height-full-16px
-        mt-10 z-0 mm:max-md:text-sm
+        mt-10 z-0 mm:max-md:text-base
         mm:max-md:z-50 mm:max-md:w-60
-        mm:max-md:left-2  
+        mm:max-md:left-2
          "
         >
-          EMPRESA ESPECIALIZADA <br /> EM FORNECER SOLUÇÕES <br /> TRANSPORTE
-          PARA DIVERSAS <br /> NECESSODADES <br />
+          Empresa especializada <br /> em fornecer soluções <br /> transporte
+          para diversas <br /> necessidades! <br />
           <br />
-          MODERNA FROTA DE VANS, <br /> MICRO-ÔNIBUS, ÔNIBUS, <br />
-          CARROS E MÁQUINAS.
+          Moderna frota de vans, <br /> micro-ônibus, ônibus, <br />
+          carros e máquinas.
         </h1>
       </motion.div>
 
