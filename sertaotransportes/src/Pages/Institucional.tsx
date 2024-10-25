@@ -14,8 +14,12 @@ export function Institucional() {
     const handleResize = () => {
       if (window.innerWidth < 480) {
         setIsWidth(true);
+      } else {
+        setIsWidth(false);
       }
     };
+
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);

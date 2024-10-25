@@ -1,5 +1,6 @@
 //images
-import caminhaoAzul from "../assets/nossahistoria/onibusBranco.svg";
+import { useEffect, useState } from "react";
+import caminhaoAzul from "../assets/nossahistoria/caminhaoAzul.svg";
 import logoSertao from "../assets/nossahistoria/logoSertaoBranca.png";
 import onibusSertao from "../assets/nossahistoria/onibusSertao.jpg";
 
@@ -7,6 +8,20 @@ import onibusSertao from "../assets/nossahistoria/onibusSertao.jpg";
 import { motion } from "framer-motion";
 
 export function NossaHistoria() {
+  const [isWidth, setWidth] = useState<boolean>();
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 480) {
+        setWidth(true);
+      } else setWidth(false);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <main className="animated-bg min-h-height-full-16px w-full flex items-center justify-center">
       <section
@@ -20,7 +35,7 @@ export function NossaHistoria() {
             transition={{ duration: 1, ease: "easeInOut" }}
             className="mm:max-md:mt-10"
           >
-            <h1 className="font-righ text-5xl uppercase text-white">
+            <h1 className="font-righ text-5xl uppercase text-white mt-16 mm:max-md:mt-0">
               conheça <br /> nossa história
             </h1>
           </motion.div>
@@ -42,20 +57,37 @@ export function NossaHistoria() {
                 trabalho e dedicação em 2012 construimos nossa garagem para a{" "}
                 guarda dos veículos e escritório.
               </motion.p>
-              <motion.div
-                initial={{ x: "100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-              >
-                <img className="" src={onibusSertao} alt="" />
-              </motion.div>
+              {isWidth ? (
+                <motion.div
+                  initial={{ x: "-100%", opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  className="mt-5"
+                >
+                  <img className="w-full" src={onibusSertao} alt="" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  initial={{ x: "-100%", opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  className="mt-5"
+                >
+                  <img
+                    className="w-1/2 items-center mx-auto"
+                    src={onibusSertao}
+                    alt=""
+                  />
+                </motion.div>
+              )}
             </div>
             <br />
             <motion.p
               initial={{ x: "100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
-              className="font-robotoC text-2xl text-white text-justify mm:max-md:text-base"
+              className="font-robotoC text-2xl
+               text-white text-justify mm:max-md:text-base mb-10"
             >
               No ano de 2014 iniciamos a diversificação dos nossos serviços,{" "}
               passando a atuar no ramo da locação de veículos. Em 2017 a empresa
@@ -76,8 +108,8 @@ export function NossaHistoria() {
             className="w-full h-full bg-cover bg-center relative flex "
           >
             <img
-              className="w-10/12 ml-20 opacity min-h-height-full-16px
-               drop-shadow-2xl mm:max-md:p-5 mm:max-md:ml-0 mm:max-md:w-full"
+              className="w-full ml-20 opacity min-h-height-full-16px
+               drop-shadow-2xl mm:max-md:ml-0 mm:max-md:w-full"
               src={caminhaoAzul}
               alt="caminhão caçamba sertão transportes cover"
             />
