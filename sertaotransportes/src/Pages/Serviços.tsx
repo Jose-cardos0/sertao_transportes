@@ -46,7 +46,7 @@ export function Servicos() {
   return (
     <main
       style={{ backgroundColor: `${isColorBg}` }}
-      className="min-w-full min-h-height-full-16px relative"
+      className="min-w-full min-h-height-full-16px relative mm:max-md:h-screen"
     >
       {!isWitdh ? (
         <div className="absolute inset-0 z-0">
@@ -58,7 +58,10 @@ export function Servicos() {
 
       <div className="relative flex-col z-10 flex-grow ">
         <Header />
-        <section className="ml-12 mt-10 flex-col items-center justify-center mm:max-md:ml-0">
+        <section
+          className="ml-12 mt-10 flex-col items-center
+         justify-center mm:max-md:ml-0 "
+        >
           <h1 className="font-righ text-5xl uppercase text-white mm:max-md:ml-12 ">
             nossos serviços
           </h1>

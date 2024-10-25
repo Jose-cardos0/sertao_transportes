@@ -15,13 +15,29 @@ import slider5 from "../assets/slidersServicesMobile/slider5.png";
 
 //icons
 import { IoLogoWhatsapp } from "react-icons/io";
-
-//components
-import footer from "../assets/footer/footer.png";
+import { motion } from "framer-motion";
 
 export function SlidersServicos() {
   return (
-    <div className="flex-col items-center justify-center mt-28">
+    <div
+      className="flex-col items-center
+     justify-center mt-28 mm:max-md:mt-0 drop-shadow-2xl  "
+    >
+      <motion.div
+        initial={{ x: "-100%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="w-10/12 rounded-br-full items-center justify-center
+       bg-white text-center mt-3 text-sm"
+      >
+        <strong className="text-custom-blue-dark">NOSSO ENDEREÇO</strong>
+        <p className="font-light text-xs">
+          Avenida Erotildes Noer de Aragçai <br />
+          2274. Bairro Jardim do Sertão. <br />
+          Nossa Senhora da Glória - SE <br />
+          CEP: 49680-000.{" "}
+        </p>
+      </motion.div>
       <Swiper
         modules={[Pagination, Navigation, Scrollbar, Autoplay]}
         spaceBetween={30}
@@ -84,9 +100,6 @@ export function SlidersServicos() {
           <strong>CONTATE-NOS</strong>
           <IoLogoWhatsapp size={40} color="green" />
         </button>
-      </div>
-      <div className="bg-white mm:max-md:mt-5">
-        <img className="h-32" src={footer} alt="sertão transportes" />
       </div>
     </div>
   );

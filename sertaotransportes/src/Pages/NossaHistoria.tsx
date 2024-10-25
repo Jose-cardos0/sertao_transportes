@@ -1,5 +1,5 @@
 //images
-import caminhaoAzul from "../assets/nossahistoria/caminhaoAzul.svg";
+import caminhaoAzul from "../assets/nossahistoria/onibusBranco.svg";
 import logoSertao from "../assets/nossahistoria/logoSertaoBranca.png";
 
 //animate
@@ -54,7 +54,7 @@ export function NossaHistoria() {
             </motion.p>
           </div>
         </text>
-        <aside className="flex min-h-full items-end justify-end ">
+        <aside className="flex min-h-full items-end justify-end mm:max-md:-mt-40 ">
           <motion.div
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
