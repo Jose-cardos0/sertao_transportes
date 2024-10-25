@@ -8,7 +8,10 @@ import { motion } from "framer-motion";
 export function NossaHistoria() {
   return (
     <main className="animated-bg min-h-height-full-16px w-full flex items-center justify-center">
-      <section className="flex justify-between items-center min-w-full min-h-full overflow-hidden mm:max-md:flex-col ">
+      <section
+        className="flex justify-between items-center 
+      min-w-full min-h-full overflow-hidden mm:max-md:flex-col "
+      >
         <text className="h-full w-1/2 flex-col ml-16 mm:max-md:w-full mm:max-md:mx-2 mm:max-md:px-4 ">
           <motion.div
             initial={{ x: "-100%", opacity: 0 }}
@@ -62,13 +65,15 @@ export function NossaHistoria() {
             className="w-full h-full bg-cover bg-center relative flex "
           >
             <img
-              className="w-full opacity min-h-height-full-16px
-               drop-shadow-2xl"
+              className="w-10/12 ml-20 opacity min-h-height-full-16px
+               drop-shadow-2xl mm:max-md:p-5 mm:max-md:ml-0 mm:max-md:w-full"
               src={caminhaoAzul}
               alt="caminhão caçamba sertão transportes cover"
             />
             <img
-              className="absolute bottom-10 right-10 drop-shadow-2xl animate-bounce mm:max-md:right-0 mm:max-md:p-7 "
+              className="absolute bottom-0 w-10/12
+              right-10 drop-shadow-2xl animate-bounce mm:max-md:right-0 mm:max-md:p-7 
+              mm:max-md:mb-11 mm:max-md:w-full mm:max-md:bottom-10"
               src={logoSertao}
               alt=""
             />
