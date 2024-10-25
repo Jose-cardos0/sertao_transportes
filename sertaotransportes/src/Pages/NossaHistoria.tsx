@@ -1,6 +1,7 @@
 //images
 import caminhaoAzul from "../assets/nossahistoria/onibusBranco.svg";
 import logoSertao from "../assets/nossahistoria/logoSertaoBranca.png";
+import onibusSertao from "../assets/nossahistoria/onibusSertao.jpg";
 
 //animate
 import { motion } from "framer-motion";
@@ -25,20 +26,30 @@ export function NossaHistoria() {
           </motion.div>
           <br />
           <div>
-            <motion.p
-              initial={{ x: "100%", opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeInOut" }}
-              className="font-robotoC text-2xl text-white text-justify mm:max-md:text-base"
-            >
-              Nossa história teve início em 2011 quando fundamos a Sertão
-              Turismo (atualmente Sertão Transportes) e compramos os primeiros{" "}
-              3(três) ônibus, seguidos de 01 micro-ônibus e 01 van, fazendo{" "}
-              apenas o serviço de fretamento para jogos, festas e turismo,{" "}
-              começando assim nossa trajetória com 03 funcionários. Com muito{" "}
-              trabalho e dedicação em 2012 construimos nossa garagem para a{" "}
-              guarda dos veículos e escritório.
-            </motion.p>
+            <div className="flex-col">
+              <motion.p
+                initial={{ x: "100%", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                className="font-robotoC text-2xl flex
+                 text-white text-justify mm:max-md:text-base "
+              >
+                Nossa história teve início em 2011 quando fundamos a Sertão
+                Turismo (atualmente Sertão Transportes) e compramos os primeiros{" "}
+                3(três) ônibus, seguidos de 01 micro-ônibus e 01 van, fazendo{" "}
+                apenas o serviço de fretamento para jogos, festas e turismo,{" "}
+                começando assim nossa trajetória com 03 funcionários. Com muito{" "}
+                trabalho e dedicação em 2012 construimos nossa garagem para a{" "}
+                guarda dos veículos e escritório.
+              </motion.p>
+              <motion.div
+                initial={{ x: "100%", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+              >
+                <img className="" src={onibusSertao} alt="" />
+              </motion.div>
+            </div>
             <br />
             <motion.p
               initial={{ x: "100%", opacity: 0 }}

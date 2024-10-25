@@ -62,7 +62,7 @@ export function Servicos() {
           className="ml-12 mt-10 flex-col items-center
          justify-center mm:max-md:ml-0 "
         >
-          <h1 className="font-righ text-5xl uppercase text-white mm:max-md:ml-12 ">
+          <h1 className="font-righ text-5xl uppercase text-white mm:max-md:text-center mm:max-md:mb-5 ">
             nossos serviços
           </h1>
           {/* Transporte de passageiros */}
