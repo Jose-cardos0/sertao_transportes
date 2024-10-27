@@ -65,7 +65,11 @@ export function Header() {
                   z-50  shadow-md shadow-black"
               >
                 <div>
-                  <img className="w-40 mb-10" src={logoHeader} alt="" />
+                  <img
+                    className="w-40 mb-2"
+                    src={logoHeader}
+                    alt="sertão transprtes"
+                  />
                 </div>
                 <motion.div
                   initial={{ x: "-100%", opacity: 0 }}

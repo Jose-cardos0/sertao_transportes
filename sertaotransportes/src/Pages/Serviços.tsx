@@ -47,7 +47,7 @@ export function Servicos() {
   return (
     <main
       style={{ backgroundColor: `${isColorBg}` }}
-      className="min-w-full min-h-height-full-16px relative mm:max-md:h-screen"
+      className="min-w-full min-h-height-full-16px relative flex-col  mm:max-md:h-screen"
     >
       {!isWitdh ? (
         <div className="absolute inset-0 z-0">
@@ -61,7 +61,7 @@ export function Servicos() {
         <Header />
         <section
           className="ml-12 mt-10 flex-col items-center
-         justify-center mm:max-md:ml-0 "
+         justify-between mm:max-md:ml-0 "
         >
           <h1 className="font-righ text-5xl uppercase text-white mm:max-md:text-center mm:max-md:mb-5 ">
             nossos serviços
@@ -130,8 +130,8 @@ export function Servicos() {
         initial={{ x: "-100%", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="w-full
-       bg-white text-center mt-3 text-sm shadow-2xl shadow-black"
+        className="w-full 
+       bg-white text-center text-sm shadow-2xl shadow-black mm:max-md:mt-20"
       >
         <div className="w-full items-center justify-center flex p-5 gap-5">
           <div className="w-1/2">
