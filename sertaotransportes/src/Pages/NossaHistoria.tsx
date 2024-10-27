@@ -1,6 +1,5 @@
 //images
 import { useEffect, useState } from "react";
-import caminhaoAzul from "../assets/nossahistoria/caminhaoAzul.svg";
 import logoSertao from "../assets/nossahistoria/logoSertaoBranca.png";
 import onibusSertao from "../assets/nossahistoria/onibusSertao.jpg";
 
@@ -25,10 +24,10 @@ export function NossaHistoria() {
   return (
     <main className="animated-bg min-h-height-full-16px w-full flex items-center justify-center">
       <section
-        className="flex justify-between items-center 
+        className="flex justify-center items-center 
       min-w-full min-h-full overflow-hidden mm:max-md:flex-col "
       >
-        <text className="h-full w-11/12 flex-col ml-16 mm:max-md:w-full mm:max-md:mx-2 mm:max-md:px-4 ">
+        <text className="h-full w-2/3 flex-col ml-16 mm:max-md:w-full mm:max-md:mx-2 mm:max-md:px-4 ">
           <motion.div
             initial={{ x: "-100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -78,7 +77,7 @@ export function NossaHistoria() {
                   initial={{ x: "-100%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 1, ease: "easeInOut" }}
-                  className="mt-5"
+                  className="mt-5 hidden"
                 >
                   <img
                     className="w-1/2 items-center mx-auto"
@@ -110,28 +109,33 @@ export function NossaHistoria() {
             </motion.p>
           </div>
         </text>
-        {/* <aside className="flex min-h-full items-end justify-end mm:max-md:-mt-40 ">
+        <aside className="flex min-h-full items-end justify-center mm:max-md:-mt-40 ">
           <motion.div
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="w-full h-full bg-cover bg-center relative flex "
+            className="w-1/2 min-h-height-full-16px flex
+             items-center justify-center  mm:max-md:hidden "
           >
-            <img
-              className="w-full ml-20 opacity min-h-height-full-16px
-               drop-shadow-2xl mm:max-md:ml-0 mm:max-md:w-full"
-              src={caminhaoAzul}
-              alt="caminhão caçamba sertão transportes cover"
-            />
-            <img
-              className="absolute bottom-0 w-10/12
+            <div className="relative">
+              <img
+                className="w-full flex items-center justify-center"
+                src={onibusSertao}
+                alt="Onibus sertão turismo"
+              />
+              <p className="text-center font-light italic">
+                ônibus Paradiso - uma das primeiras aquisições da empresa.
+              </p>
+              <img
+                className="absolute bottom-10 w-10/12
               right-10 drop-shadow-2xl animate-bounce mm:max-md:right-0 mm:max-md:p-7 
               mm:max-md:mb-11 mm:max-md:w-full mm:max-md:bottom-10"
-              src={logoSertao}
-              alt=""
-            />
+                src={logoSertao}
+                alt=""
+              />
+            </div>
           </motion.div>
-        </aside> */}
+        </aside>
       </section>
     </main>
   );
