@@ -10,11 +10,11 @@ import { Footer } from "./Footer";
 export function BgComponentServices() {
   return (
     <main
-      style={{ backgroundColor: "#D2E2EC" }}
+      style={{ backgroundColor: "#00497E" }}
       className=" inset-0 z-0
       min-w-full min-h-height-full-16px "
     >
-      <div className="flex relative ">
+      <div className=" relative hidden ">
         <motion.img
           initial={{ x: "-100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -35,8 +35,8 @@ export function BgComponentServices() {
         />
       </div>
       <footer
-        className="bg-white flex justify-end
-       items-baseline z-50 mm:max-md:absolute "
+        className="bg-white  justify-end
+       items-baseline z-50 mm:max-md:absolute hidden"
       >
         <Footer />
       </footer>

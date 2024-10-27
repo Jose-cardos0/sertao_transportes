@@ -60,10 +60,13 @@ export function Header() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute top-16 left-0
-                 right-0 bg-custom-blue-light min-w-full min-h-11 
-                 flex flex-col items-center bg-opacity-90
-                  z-50 rounded-b-2xl shadow-md shadow-black"
+                 right-0 bg-custom-blue-light w-2/3 min-h-height-full-16px 
+                 flex flex-col justify-center items-center bg-opacity-95
+                  z-50  shadow-md shadow-black"
               >
+                <div>
+                  <img className="w-40 mb-10" src={logoHeader} alt="" />
+                </div>
                 <motion.div
                   initial={{ x: "-100%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
@@ -78,7 +81,7 @@ export function Header() {
                 </motion.div>
 
                 <motion.div
-                  initial={{ x: "100%", opacity: 0 }}
+                  initial={{ x: "-100%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 1, ease: "easeInOut" }}
                   className="w-full text-center hover:bg-white hover:bg-opacity-30 hover:font-semibold"
@@ -104,7 +107,7 @@ export function Header() {
                 </motion.div>
 
                 <motion.div
-                  initial={{ x: "100%", opacity: 0 }}
+                  initial={{ x: "-100%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 1, ease: "easeInOut" }}
                   className="w-full text-center hover:bg-white hover:bg-opacity-30 hover:font-semibold"
@@ -129,7 +132,7 @@ export function Header() {
                   </Link>
                 </motion.div>
                 <motion.div
-                  initial={{ x: "100%", opacity: 0 }}
+                  initial={{ x: "-100%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 1, ease: "easeInOut" }}
                   className="w-full text-center hover:bg-white hover:bg-opacity-30 hover:font-semibold"

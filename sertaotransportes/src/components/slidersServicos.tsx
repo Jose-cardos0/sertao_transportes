@@ -12,10 +12,11 @@ import slider2 from "../assets/slidersServicesMobile/slider2.png";
 import slider3 from "../assets/slidersServicesMobile/slider3.png";
 import slider4 from "../assets/slidersServicesMobile/slider4.png";
 import slider5 from "../assets/slidersServicesMobile/slider5.png";
+// import footer from "../assets/footer/footer.png";
 
 //icons
-import { IoLogoWhatsapp } from "react-icons/io";
-import { motion } from "framer-motion";
+// import { IoLogoWhatsapp } from "react-icons/io";
+// import { motion } from "framer-motion";
 
 export function SlidersServicos() {
   return (
@@ -23,21 +24,6 @@ export function SlidersServicos() {
       className="flex-col items-center
      justify-center mt-28 mm:max-md:mt-0 drop-shadow-2xl  "
     >
-      <motion.div
-        initial={{ x: "-100%", opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className="w-10/12 rounded-br-full items-center justify-center
-       bg-white text-center mt-3 text-sm"
-      >
-        <strong className="text-custom-blue-dark">NOSSO ENDEREÇO</strong>
-        <p className="font-light text-xs">
-          Avenida Erotildes Noer de Aragçai <br />
-          2274. Bairro Jardim do Sertão. <br />
-          Nossa Senhora da Glória - SE <br />
-          CEP: 49680-000.{" "}
-        </p>
-      </motion.div>
       <Swiper
         modules={[Pagination, Navigation, Scrollbar, Autoplay]}
         spaceBetween={30}
@@ -53,7 +39,7 @@ export function SlidersServicos() {
         <div className="flex items-center justify-center ">
           <SwiperSlide>
             <img
-              className="drop-shadow-md w-full mt-5"
+              className="drop-shadow-md w-full mt-16"
               src={slider1}
               alt="serviços sertão transportes"
             />
@@ -67,29 +53,29 @@ export function SlidersServicos() {
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="drop-shadow-md w-full mt-5"
+              className="drop-shadow-md w-full ml-4 mt-14"
               src={slider3}
               alt="serviços sertão transportes"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="drop-shadow-md w-full mm:max-md:-ml-8 mt-5"
+              className="drop-shadow-md w-full -ml-5 mt-16"
               src={slider4}
               alt="serviços sertão transportes"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="drop-shadow-md w-full mm:max-md:-ml-2"
+              className="drop-shadow-md w-full mt-16 -ml-2"
               src={slider5}
               alt="serviços sertão transportes"
             />
           </SwiperSlide>
         </div>
       </Swiper>
-      <div className="w-full flex items-center justify-center px-10 pt-3">
-        <button
+
+      {/* <button
           className="flex items-center
          justify-center gap-2 bg-white px-5
           rounded-xl shadow-md
@@ -99,8 +85,7 @@ export function SlidersServicos() {
         >
           <strong>CONTATE-NOS</strong>
           <IoLogoWhatsapp size={40} color="green" />
-        </button>
-      </div>
+        </button> */}
     </div>
   );
 }

@@ -28,7 +28,7 @@ export function NossaHistoria() {
         className="flex justify-between items-center 
       min-w-full min-h-full overflow-hidden mm:max-md:flex-col "
       >
-        <text className="h-full w-1/2 flex-col ml-16 mm:max-md:w-full mm:max-md:mx-2 mm:max-md:px-4 ">
+        <text className="h-full w-11/12 flex-col ml-16 mm:max-md:w-full mm:max-md:mx-2 mm:max-md:px-4 ">
           <motion.div
             initial={{ x: "-100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -64,7 +64,14 @@ export function NossaHistoria() {
                   transition={{ duration: 1, ease: "easeInOut" }}
                   className="mt-5"
                 >
-                  <img className="w-full" src={onibusSertao} alt="" />
+                  <img
+                    className="w-full"
+                    src={onibusSertao}
+                    alt="Onibus sertão turismo"
+                  />
+                  <p className="text-center font-light italic">
+                    ônibus Paradiso - uma das primeiras aquisições da empresa.
+                  </p>
                 </motion.div>
               ) : (
                 <motion.div
@@ -78,6 +85,9 @@ export function NossaHistoria() {
                     src={onibusSertao}
                     alt=""
                   />
+                  <p className="text-center font-light italic">
+                    ônibus Paradiso - uma das primeiras aquisições da empresa.
+                  </p>
                 </motion.div>
               )}
             </div>
@@ -100,7 +110,7 @@ export function NossaHistoria() {
             </motion.p>
           </div>
         </text>
-        <aside className="flex min-h-full items-end justify-end mm:max-md:-mt-40 ">
+        {/* <aside className="flex min-h-full items-end justify-end mm:max-md:-mt-40 ">
           <motion.div
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -121,7 +131,7 @@ export function NossaHistoria() {
               alt=""
             />
           </motion.div>
-        </aside>
+        </aside> */}
       </section>
     </main>
   );
