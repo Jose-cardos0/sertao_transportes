@@ -25,9 +25,9 @@ export function NossaHistoria() {
     <main className="animated-bg min-h-height-full-16px w-full flex items-center justify-center">
       <section
         className="flex justify-center items-center 
-      min-w-full min-h-full overflow-hidden mm:max-md:flex-col "
+      min-w-full min-h-full mm:max-md:flex-col "
       >
-        <text className="h-full w-2/3 flex-col ml-16 mm:max-md:w-full mm:max-md:mx-2 mm:max-md:px-4 ">
+        <text className="animated-bg h-full w-2/3 flex-col ml-16 mm:max-md:w-full mm:max-md:mx-2 mm:max-md:px-4 ">
           <motion.div
             initial={{ x: "-100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -96,7 +96,7 @@ export function NossaHistoria() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
               className="font-robotoC text-2xl
-               text-white text-justify mm:max-md:text-base mb-10"
+               text-white text-justify mm:max-md:text-base mm:max-md:mb-10 mb-10"
             >
               No ano de 2014 iniciamos a diversificação dos nossos serviços,{" "}
               passando a atuar no ramo da locação de veículos. Em 2017 a empresa

@@ -9,10 +9,7 @@
 }
 
 .animated-bg {
-  background: linear-gradient(190deg, #00497e, #2d8fbc);
-  background-size: 150% 150%;
-  animation: gradientFlow 6s ease;
-  color: white;
+  background-color: #00497e;
 }
 
 /* @keyframes gradientFlow {

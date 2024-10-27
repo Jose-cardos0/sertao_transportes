@@ -22,7 +22,7 @@ export function Contato() {
           <h1 className="font-righ text-5xl uppercase text-white">CONTATO</h1>
           <form className="min-w-full mt-5  ">
             <label>
-              <p className="font-righ text-lg">Nome:</p>
+              <p className="font-righ text-lg text-white">Nome:</p>
               <input
                 className="rounded-lg min-w-full bg-blue-100 outline-none
                text-black px-2 uppercase"
@@ -30,7 +30,7 @@ export function Contato() {
               />
             </label>
             <label>
-              <p className="font-righ text-lg">Contato:</p>
+              <p className="font-righ text-lg text-white">Contato:</p>
               <input
                 className="rounded-lg min-w-full bg-blue-100 outline-none
                text-black px-2 uppercase"
@@ -38,7 +38,7 @@ export function Contato() {
               />
             </label>
             <label>
-              <p className="font-righ text-lg">Caixa de mensagem:</p>
+              <p className="font-righ text-lg text-white">Caixa de mensagem:</p>
               <textarea
                 rows={8}
                 className="rounded-lg min-w-full bg-blue-100 outline-none
@@ -47,10 +47,10 @@ export function Contato() {
             </label>
             <div className="min-w-full flex items-end justify-end mt-4">
               <button
-                className="text-white font-righ
-              bg-custom-blue-dark
+                className="text-custom-blue-dark font-righ
+              bg-white
               py-1 px-9 rounded-xl uppercase shadow-md shadow-black transition duration-300
-               hover:bg-white hover:text-custom-blue-dark"
+               hover:bg-custom-blue-dark hover:text-white"
               >
                 enviar
               </button>
