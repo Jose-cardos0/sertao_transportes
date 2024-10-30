@@ -23,7 +23,7 @@ export function Header() {
   return (
     <header
       className="min-w-full bg-custom-blue-dark 
-      h-14 flex items-center justify-between shadow-xl
+      h-16 flex items-center justify-between shadow-xl
      drop-shadow-xl z-50 relative"
     >
       <div
@@ -199,7 +199,7 @@ export function Header() {
                 initial={{ opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="absolute top-14 flex gap-10 left-0 right-0
+                className="absolute top-16 flex gap-10 left-0 right-0
              bg-custom-blue-light min-w-full min-h-11
               items-center bg-opacity-50 z-50"
               >
