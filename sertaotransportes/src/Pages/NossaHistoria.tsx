@@ -22,7 +22,10 @@ export function NossaHistoria() {
   }, []);
 
   return (
-    <main className="animated-bg min-h-height-full-16px w-full flex items-center justify-center">
+    <main
+      className="animated-bg min-h-height-full-16px
+     w-full flex items-center justify-center overflow-hidden"
+    >
       <section
         className="flex justify-center items-center 
       min-w-full min-h-full mm:max-md:flex-col "

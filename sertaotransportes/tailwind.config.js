@@ -19,7 +19,7 @@ export default {
         "custom-blue-light": "#296693",
       },
       minHeight: {
-        "height-full-16px": "calc(100vh - 64px)",
+        "height-full-16px": "calc(100vh - 56px)",
       },
     },
     screens: {

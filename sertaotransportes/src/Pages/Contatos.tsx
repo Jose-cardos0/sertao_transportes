@@ -17,7 +17,7 @@ export function Contato() {
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="mx-12 mb-80 mt-16 max-md:mb-11 max-md:mt-16"
+          className="mx-12 mb-80 mt-32 max-md:mb-11 max-md:mt-16"
         >
           <h1 className="font-righ text-5xl uppercase text-white">CONTATO</h1>
           <form className="min-w-full mt-5  ">

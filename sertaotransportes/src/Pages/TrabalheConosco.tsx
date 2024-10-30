@@ -13,12 +13,11 @@ export function TrabalheConosco() {
     <main
       className="animated-bg w-full
      flex-col items-center 
-     justify-center overflow-hidden
-       "
+     justify-center overflow-hidden min-h-height-full-16px"
     >
       <section
         className="flex-grow items-center
-       justify-end mt-10 z-0    "
+       justify-end mt-10 z-0"
       >
         <motion.div
           initial={{ x: "100%", opacity: 0 }}
