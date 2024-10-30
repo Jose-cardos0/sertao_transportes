@@ -24,7 +24,7 @@ export function NossaHistoria() {
   return (
     <main
       className="animated-bg min-h-height-full-16px
-     w-full flex items-center justify-center overflow-hidden"
+     w-full flex items-center justify-center "
     >
       <section
         className="flex justify-center items-center 
