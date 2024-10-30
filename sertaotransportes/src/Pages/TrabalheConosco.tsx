@@ -2,11 +2,11 @@
 import { motion } from "framer-motion";
 
 //router
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 //images
 import trabalheConosco from "../assets/trabalheConosco/trabalheConosco.png";
-import FooterPng from "../assets/footer/footer.png";
+// import FooterPng from "../assets/footer/footer.png";
 
 export function TrabalheConosco() {
   return (
@@ -54,7 +54,7 @@ export function TrabalheConosco() {
             </div>
           </div>
         </motion.div>
-        <Link to={"/"}>
+        {/* <Link to={"/"}>
           <div className=" bg-white flex items-center justify-center m-auto">
             <img
               className="max-w-2xl max-md:w-96 max-md:px-2 "
@@ -62,7 +62,7 @@ export function TrabalheConosco() {
               alt="sertão transportes"
             />
           </div>
-        </Link>
+        </Link> */}
       </section>
     </main>
   );
