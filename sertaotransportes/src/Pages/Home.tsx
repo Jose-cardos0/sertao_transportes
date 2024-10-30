@@ -45,10 +45,10 @@ export function Home() {
       >
         <h1
           className="absolute w-screen
-       text-white font-righ text-5xl
+       text-white font-medium text-5xl
         flex items-center justify-start
         left-11 min-h-height-full-16px
-        mt-10 z-0 mm:max-md:text-base
+         z-0 mm:max-md:text-base
         mm:max-md:z-50 mm:max-md:w-60
         mm:max-md:left-2
          "
