@@ -1,15 +1,15 @@
-import FooterPng from "../assets/footer/footer.png";
+// import FooterPng from "../assets/footer/footer.png";
 
 //motion
 import { motion } from "framer-motion";
 
 //router
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export function Contato() {
   return (
     <main
-      className="animated-bg w-full
+      className="animated-bg w-full min-h-height-full-16px
    flex-col items-center justify-center overflow-hidden "
     >
       <section className="flex-col items-center justify-center">
@@ -17,7 +17,7 @@ export function Contato() {
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="mx-12 mb-80 mt-32 max-md:mb-11 max-md:mt-16"
+          className="mx-12  mt-16 max-md:mb-11 max-md:mt-16"
         >
           <h1 className="font-righ text-5xl uppercase text-white">CONTATO</h1>
           <form className="min-w-full mt-5  ">
@@ -57,7 +57,7 @@ export function Contato() {
             </div>
           </form>
         </motion.div>
-        <Link to={"/"}>
+        {/* <Link to={"/"}>
           <div className=" bg-white flex items-center justify-center m-auto">
             <img
               className="max-w-2xl max-md:w-96 max-md:px-2 "
@@ -65,7 +65,7 @@ export function Contato() {
               alt="sertão transportes"
             />
           </div>
-        </Link>
+        </Link> */}
       </section>
     </main>
   );

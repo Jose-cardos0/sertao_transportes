@@ -47,7 +47,7 @@ export function TrabalheConosco() {
                "
             >
               <img
-                className="w-10/12 flex items-end justify-end mm:max-md:w-9/12 "
+                className="w-2/4 flex items-end justify-end mm:max-md:w-9/12 "
                 src={trabalheConosco}
                 alt="trabalhe conosco sertao transportes"
               />
