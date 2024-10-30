@@ -58,8 +58,12 @@ export function Contato() {
           </form>
         </motion.div>
         <Link to={"/"}>
-          <div>
-            <img src={FooterPng} alt="sertão transportes" />
+          <div className=" bg-white flex items-center justify-center m-auto">
+            <img
+              className="max-w-2xl max-md:w-96 max-md:px-2 "
+              src={FooterPng}
+              alt="sertão transportes"
+            />
           </div>
         </Link>
       </section>

@@ -2,11 +2,29 @@
 import bgEstradaHome from "../assets/home/bgEstrada.png";
 import triangleCars from "../assets/home/triangulo.png";
 import artOct from "../assets/home/arteOct.png";
+import triangulo2 from "../assets/home/trangulo2.png";
 
 //motions
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export function Home() {
+  const [widthViwer, setWidth] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 480) {
+        setWidth(true);
+      } else {
+        setWidth(false);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <main
       style={{
@@ -35,7 +53,7 @@ export function Home() {
         mm:max-md:left-2
          "
         >
-          Empresa especializada <br /> em fornecer soluções <br /> transporte
+          Empresa especializada <br /> em fornecer soluções de <br /> transporte
           para diversas <br /> necessidades! <br />
           <br />
           Moderna frota de vans, <br /> micro-ônibus, ônibus, <br />
@@ -58,12 +76,21 @@ export function Home() {
            bg-no-repeat w-full flex 
            drop-shadow-2xl justify-end"
       >
-        <div
-          style={{ backgroundImage: `url(${triangleCars})` }}
-          className="min-h-height-full-16px
+        {widthViwer === true ? (
+          <div
+            style={{ backgroundImage: `url(${triangulo2})` }}
+            className="min-h-height-full-16px
            bg-no-repeat w-1/2 flex 
-           drop-shadow-2xl bg-cover  "
-        ></div>
+           drop-shadow-2xl bg-cover shadow-black  "
+          ></div>
+        ) : (
+          <div
+            style={{ backgroundImage: `url(${triangleCars})` }}
+            className="min-h-height-full-16px
+         bg-no-repeat w-1/2 flex 
+         drop-shadow-2xl bg-cover  "
+          ></div>
+        )}
       </motion.div>
     </main>
   );

@@ -14,7 +14,7 @@ export function TrabalheConosco() {
       className="animated-bg w-full
      flex-col items-center 
      justify-center overflow-hidden
-      min-h-height-full-16px "
+       "
     >
       <section
         className="flex-grow items-center
@@ -43,23 +43,27 @@ export function TrabalheConosco() {
               </h1>
             </div>
             <div
-              className="w-1/2 mm:max-md:w-full
+              className="w-1/2 flex items-end justify-end mm:max-md:w-full
                "
             >
               <img
-                className="min-w-screen flex items-end justify-end "
+                className="w-10/12 flex items-end justify-end "
                 src={trabalheConosco}
                 alt="trabalhe conosco sertao transportes"
               />
             </div>
           </div>
         </motion.div>
+        <Link to={"/"}>
+          <div className=" bg-white flex items-center justify-center m-auto">
+            <img
+              className="max-w-2xl max-md:w-96 max-md:px-2 "
+              src={FooterPng}
+              alt="sertão transportes"
+            />
+          </div>
+        </Link>
       </section>
-      <Link to={"/"}>
-        <div>
-          <img src={FooterPng} alt="sertão transportes" />
-        </div>
-      </Link>
     </main>
   );
 }

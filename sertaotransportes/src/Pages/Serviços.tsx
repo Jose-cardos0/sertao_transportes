@@ -136,7 +136,7 @@ export function Servicos() {
               NOSSO ENDEREÇO
             </strong>
             <p className="font-bold text-2xl text-center text-white mm:max-md:text-xs">
-              Avenida Erotildes Noer de Aragçai 2274. Bairro Jardim do Sertão.
+              Avenida Erotildes Noer de Aragão 2274. Bairro Jardim do Sertão.
               Nossa Senhora da Glória - SE CEP: 49680-000.
             </p>
           </div>

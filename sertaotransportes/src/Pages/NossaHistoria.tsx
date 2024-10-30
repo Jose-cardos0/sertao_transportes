@@ -123,7 +123,7 @@ export function NossaHistoria() {
                 src={onibusSertao}
                 alt="Onibus sertão turismo"
               />
-              <p className="text-center font-light italic">
+              <p className="text-center font-light italic text-white">
                 ônibus Paradiso - uma das primeiras aquisições da empresa.
               </p>
               <img

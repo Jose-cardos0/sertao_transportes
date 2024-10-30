@@ -78,7 +78,10 @@ export function Header() {
                   className="w-full text-center hover:bg-white hover:bg-opacity-30 hover:font-semibold"
                 >
                   <Link to={"/home"}>
-                    <button onClick={() => setIsOpen(false)} className="py-1">
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="py-1 -ml-12"
+                    >
                       Home
                     </button>
                   </Link>
@@ -91,7 +94,10 @@ export function Header() {
                   className="w-full text-center hover:bg-white hover:bg-opacity-30 hover:font-semibold"
                 >
                   <Link to={"/servicos"}>
-                    <button onClick={() => setIsOpen(false)} className="py-1 ">
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="py-1 -ml-8 "
+                    >
                       Serviços
                     </button>
                   </Link>
@@ -104,7 +110,10 @@ export function Header() {
                   className="w-full text-center hover:bg-white hover:bg-opacity-30 hover:font-semibold"
                 >
                   <Link to={"/nossa-historia"}>
-                    <button onClick={() => setIsOpen(false)} className="py-1 ">
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="py-1 ml-2 "
+                    >
                       Nossa História
                     </button>
                   </Link>
@@ -117,7 +126,10 @@ export function Header() {
                   className="w-full text-center hover:bg-white hover:bg-opacity-30 hover:font-semibold"
                 >
                   <Link to={"/institucional"}>
-                    <button onClick={() => setIsOpen(false)} className="py-1 ">
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="py-1 mr-2 "
+                    >
                       Institucional
                     </button>
                   </Link>
@@ -130,7 +142,10 @@ export function Header() {
                   className="w-full text-center hover:bg-white hover:bg-opacity-30 hover:font-semibold"
                 >
                   <Link to={"/trabalhe-conosco"}>
-                    <button onClick={() => setIsOpen(false)} className="py-1">
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="py-1 ml-7"
+                    >
                       Trabalhe Conosco
                     </button>
                   </Link>
@@ -142,7 +157,10 @@ export function Header() {
                   className="w-full text-center hover:bg-white hover:bg-opacity-30 hover:font-semibold"
                 >
                   <Link to={"/contato"}>
-                    <button onClick={() => setIsOpen(false)} className="py-1 ">
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="py-1 mr-9 "
+                    >
                       Contato
                     </button>
                   </Link>
