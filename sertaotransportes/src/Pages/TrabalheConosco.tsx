@@ -24,6 +24,7 @@ export function TrabalheConosco() {
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
+          className="mt-40 max-md:mt-0"
         >
           <div className="flex items-center justify-end mm:max-md:flex-col ">
             <div
@@ -47,7 +48,7 @@ export function TrabalheConosco() {
                "
             >
               <img
-                className="w-10/12 flex items-end justify-end "
+                className="w-10/12 flex items-end justify-end mm:max-md:w-9/12 "
                 src={trabalheConosco}
                 alt="trabalhe conosco sertao transportes"
               />

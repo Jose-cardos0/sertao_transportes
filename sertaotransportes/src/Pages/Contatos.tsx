@@ -17,7 +17,7 @@ export function Contato() {
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="mx-12 mb-20 mt-16"
+          className="mx-12 mb-80 mt-16 max-md:mb-11 max-md:mt-16"
         >
           <h1 className="font-righ text-5xl uppercase text-white">CONTATO</h1>
           <form className="min-w-full mt-5  ">
@@ -40,7 +40,7 @@ export function Contato() {
             <label>
               <p className="font-righ text-lg text-white">Caixa de mensagem:</p>
               <textarea
-                rows={8}
+                rows={5}
                 className="rounded-lg min-w-full bg-blue-100 outline-none
                text-black p-2 uppercase :"
               />
