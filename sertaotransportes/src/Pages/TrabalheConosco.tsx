@@ -11,9 +11,9 @@ import trabalheConosco from "../assets/trabalheConosco/trabalheConosco.png";
 export function TrabalheConosco() {
   return (
     <main
-      className="animated-bg w-full
-     flex-col items-center 
-     justify-center overflow-hidden min-h-height-full-16px"
+      className="animated-bg
+     flex items-end 
+     justify-end overflow-hidden min-h-height-full-16px"
     >
       <section
         className="flex-grow items-center
