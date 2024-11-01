@@ -140,11 +140,6 @@ export function Servicos() {
               Nossa Senhora da Glória - SE CEP: 49680-000.
             </p>
           </div>
-          <img
-            className="w-96 mm:max-md:w-1/2"
-            src={logo}
-            alt="sertão transportes"
-          />
         </div>
       </div>
     </main>
