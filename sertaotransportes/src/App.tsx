@@ -1,5 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 
+//protect
+import { Protect } from "./components/Protect";
+
 //pages
 import { Layout } from "./components/Layout";
 import { Home } from "./Pages/Home";
@@ -7,9 +10,11 @@ import { Welcome } from "./Pages/Welcome";
 import { NossaHistoria } from "./Pages/NossaHistoria";
 import { Institucional } from "./Pages/Institucional";
 import { Servicos } from "./Pages/Serviços";
-import { Certificados } from "./Pages/Certificados";
+import { NossoBlog } from "./Pages/Blog";
 import { TrabalheConosco } from "./Pages/TrabalheConosco";
 import { Contato } from "./Pages/Contatos";
+import { Admin } from "./Pages/Admin";
+import { BlogAdmin } from "./Pages/BlogAdmin";
 
 const router = createBrowserRouter([
   {
@@ -37,8 +42,8 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "certificados",
-        element: <Certificados />,
+        path: "/blogSertao",
+        element: <NossoBlog />,
       },
       {
         path: "trabalhe-conosco",
@@ -47,6 +52,18 @@ const router = createBrowserRouter([
       {
         path: "contato",
         element: <Contato />,
+      },
+      {
+        path: "admin",
+        element: <Admin />,
+      },
+      {
+        path: "/blog-admin",
+        element: (
+          <Protect>
+            <BlogAdmin />,
+          </Protect>
+        ),
       },
     ],
   },

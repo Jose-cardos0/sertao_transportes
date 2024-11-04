@@ -168,6 +168,36 @@ export function Header() {
                     </button>
                   </Link>
                 </motion.div>
+                <motion.div
+                  initial={{ x: "-100%", opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  className="w-full text-center hover:bg-white hover:bg-opacity-30 hover:font-semibold"
+                >
+                  <Link to={"/blogSertao"}>
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="py-1 mr-9 "
+                    >
+                      Nosso Blog
+                    </button>
+                  </Link>
+                </motion.div>
+                <motion.div
+                  initial={{ x: "-100%", opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  className="w-full text-center hover:bg-white hover:bg-opacity-30 hover:font-semibold"
+                >
+                  <Link to={"/admin"}>
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="py-1 mr-9 "
+                    >
+                      Admin
+                    </button>
+                  </Link>
+                </motion.div>
               </motion.div>
             )}
           </>
@@ -238,12 +268,14 @@ export function Header() {
                   Serviços
                 </button>
               </Link>
-              <button
-                className="relative px-2 py-1 font-robotoC flex items-center
+              <Link to={"/blogSertao"}>
+                <button
+                  className="relative px-2 py-1 font-robotoC flex items-center
              justify-center hover:bg-custom-blue-light rounded-md"
-              >
-                Certificados
-              </button>
+                >
+                  Nosso Blog
+                </button>
+              </Link>
               <Link to={"/trabalhe-conosco"}>
                 <button
                   className="relative px-2 py-1 font-robotoC flex items-center
@@ -258,6 +290,14 @@ export function Header() {
              justify-center hover:bg-custom-blue-light rounded-md"
                 >
                   Contato
+                </button>
+              </Link>
+              <Link to={"/admin"}>
+                <button
+                  className="relative px-2 py-1 font-robotoC flex items-center
+             justify-center hover:bg-custom-blue-light rounded-md"
+                >
+                  Admin
                 </button>
               </Link>
             </ul>
