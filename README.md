@@ -13,6 +13,8 @@ A ideia central do site é simples, porém sofisticada, com um design limpo que 
 • TYPESCRIPT </br>
 • FRAME-MOTION</br>
 • REACT-ICONS</br>
+• FIREBASE</br>
+• HOT TOASTFY</br>
 
 # PRINTS DO PROJETO
 
