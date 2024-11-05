@@ -1,4 +1,5 @@
-import React, { createContext, useState, ReactNode } from "react";
+import React, { createContext, useState, ReactNode, useEffect } from "react";
+import { onAuthStateChanged } from "firebase/auth";
 
 //signout
 import { signOut } from "firebase/auth";
@@ -22,6 +23,19 @@ export const AuthContext = createContext({} as UseContextType);
 export const AuthProvider = ({ children }: AuthProviderData) => {
   const [isSign, setSign] = useState<boolean>(false);
   console.log(isSign);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setSign(true);
+      } else {
+        setSign(false);
+      }
+    });
+
+    // Limpa o listener quando o componente é desmontado
+    return () => unsubscribe();
+  }, []);
 
   async function signOutLogin() {
     try {

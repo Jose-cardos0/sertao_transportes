@@ -15,6 +15,7 @@ import { TrabalheConosco } from "./Pages/TrabalheConosco";
 import { Contato } from "./Pages/Contatos";
 import { Admin } from "./Pages/Admin";
 import { BlogAdmin } from "./Pages/BlogAdmin";
+import { PostDeatil } from "./Pages/PostDetail";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/blogSertao",
         element: <NossoBlog />,
+      },
+      {
+        path: "/postDeatil/:id",
+        element: <PostDeatil />,
       },
       {
         path: "trabalhe-conosco",

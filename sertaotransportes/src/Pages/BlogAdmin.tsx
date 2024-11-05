@@ -44,12 +44,14 @@ export function BlogAdmin() {
     uploadImage();
 
     if (!titulo || !textArea || !imageUrl) {
-      toast.error("Por favor, tente novamente!");
+      toast.error("Aguarde, imagem sendo enviada!");
+      await uploadImage();
+      toast.success("Imagem enviada, por favor, clique em ENVIAR");
       return;
     }
 
     const postData = {
-      id: uuidv4(),
+      uuid: uuidv4(),
       titulo: titulo,
       conteudo: textArea,
       img: imageUrl,
@@ -78,7 +80,7 @@ export function BlogAdmin() {
 
     try {
       const response = await axios.post(
-        `https://api.imgbb.com/1/upload?expiration=600&key=${api}`,
+        `https://api.imgbb.com/1/upload?key=${api}`,
         formData,
         {
           headers: {

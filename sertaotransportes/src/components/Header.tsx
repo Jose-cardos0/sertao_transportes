@@ -9,6 +9,9 @@ import { motion } from "framer-motion";
 //router
 import { Link } from "react-router-dom";
 
+//icons
+import { IoMdLogOut } from "react-icons/io";
+
 export function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 480);
@@ -60,14 +63,14 @@ export function Header() {
             </Link>
             {isSign == true ? (
               <button
-                className="py-2 px-4 my-5 bg-white 
-                        rounded-lg font-bold text-custom-blue-dark shadow-md
-                         shadow-black hover:bg-custom-blue-dark
-                          transition duration-300
-                           hover:text-white"
+                className="p-2 my-5 bg-white 
+                          rounded-full font-bold text-custom-blue-dark shadow-md
+                           shadow-black hover:bg-custom-blue-dark
+                            transition duration-300
+                             hover:text-white"
                 onClick={signOutLogin}
               >
-                Sair
+                <IoMdLogOut />
               </button>
             ) : (
               ""
@@ -195,7 +198,7 @@ export function Header() {
                   <Link to={"/blogSertao"}>
                     <button
                       onClick={() => setIsOpen(false)}
-                      className="py-1 mr-9 "
+                      className="py-1 mr-2 "
                     >
                       Nosso Blog
                     </button>
@@ -210,9 +213,9 @@ export function Header() {
                   <Link to={"/admin"}>
                     <button
                       onClick={() => setIsOpen(false)}
-                      className="py-1 mr-9 "
+                      className="py-1 mr-11 "
                     >
-                      Admin
+                      Login
                     </button>
                   </Link>
                 </motion.div>
@@ -315,7 +318,7 @@ export function Header() {
                   className="relative px-2 py-1 font-robotoC flex items-center
              justify-center hover:bg-custom-blue-light rounded-md"
                 >
-                  Admin
+                  Login
                 </button>
               </Link>
               {isSign === true ? (
