@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import logoHeader from "../assets/header/logoSertao.png";
+import { AuthContext } from "../components/UseContext";
+import { useContext } from "react";
 
 //motions
 import { motion } from "framer-motion";
@@ -10,6 +12,7 @@ import { Link } from "react-router-dom";
 export function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 480);
+  const { isSign, signOutLogin } = useContext(AuthContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -55,6 +58,20 @@ export function Header() {
                 />
               </motion.div>
             </Link>
+            {isSign == true ? (
+              <button
+                className="py-2 px-4 my-5 bg-white 
+                        rounded-lg font-bold text-custom-blue-dark shadow-md
+                         shadow-black hover:bg-custom-blue-dark
+                          transition duration-300
+                           hover:text-white"
+                onClick={signOutLogin}
+              >
+                Sair
+              </button>
+            ) : (
+              ""
+            )}
             {isOpen && (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -74,6 +91,7 @@ export function Header() {
                     alt="sertão transprtes"
                   />
                 </div>
+
                 <motion.div
                   initial={{ x: "-100%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
@@ -251,7 +269,7 @@ export function Header() {
                 </Link>
               </motion.div>
             )}
-            <ul className="flex gap-5">
+            <ul className="flex gap-5  items-center justify-center">
               <Link to={"/home"}>
                 <button
                   className="relative px-2 py-1 font-robotoC flex items-center
@@ -300,6 +318,20 @@ export function Header() {
                   Admin
                 </button>
               </Link>
+              {isSign === true ? (
+                <button
+                  className="py-2 px-4 my-5 bg-white 
+                        rounded-lg font-bold text-custom-blue-dark shadow-md
+                         shadow-black hover:bg-custom-blue-dark
+                          transition duration-300
+                           hover:text-white"
+                  onClick={signOutLogin}
+                >
+                  Sair
+                </button>
+              ) : (
+                ""
+              )}
             </ul>
           </>
         )}

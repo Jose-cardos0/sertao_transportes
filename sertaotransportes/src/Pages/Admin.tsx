@@ -9,12 +9,16 @@ import {
 //blog-admin
 
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../components/UseContext";
 
 export function Admin() {
   const [user, setUser] = useState<string>();
   const [password, setPassword] = useState<string>();
   const [recover, setRecover] = useState(false);
   const [resetEmail, setResetEmail] = useState<any>();
+
+  const { setSign } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -24,6 +28,7 @@ export function Admin() {
     if (user && password) {
       try {
         await signInWithEmailAndPassword(auth, user, password);
+        setSign(true);
         toast.success("Login bem-sucedido!");
         navigate("/blog-admin");
       } catch (error) {
