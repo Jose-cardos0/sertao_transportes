@@ -125,9 +125,9 @@ export function Admin() {
       {recover === true ? (
         <div
           className="absolute bg-custom-blue-dark min-h-height-full-16px
-         w-screen flex items-center justify-center m-auto"
+         w-screen flex items-center justify-center m-auto px-7"
         >
-          <div className=" bg-white px-6 w-10/12 shadow-md shadow-black  ">
+          <div className=" bg-white px-6 max-w-96 shadow-md  shadow-black  ">
             <form
               onSubmit={handleReset}
               className="flex-col items-center justify-center w-full  "

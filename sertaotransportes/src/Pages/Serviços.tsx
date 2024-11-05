@@ -11,7 +11,6 @@ import carServices from "../assets/Servicos/carsServices.png";
 import escolar from "../assets/Servicos/escolar.png";
 import pesados from "../assets/Servicos/maquinarioPesado.png";
 import trator from "../assets/Servicos/trator.png";
-import logo from "../assets/header/logoSertao.png";
 
 //composntes
 import { Header } from "../components/Header";

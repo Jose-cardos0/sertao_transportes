@@ -59,6 +59,10 @@ export function BlogAdmin() {
     try {
       await addDoc(collection(db, "postBlog"), postData);
       toast.success("Post criado!");
+      setTitulo("");
+      setImg("");
+
+      setTexArea("");
     } catch (error) {
       toast.error("Ops... Algo deu errado");
       console.log(error);
