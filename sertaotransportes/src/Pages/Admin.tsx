@@ -12,6 +12,9 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../components/UseContext";
 
+//framemotion
+import { motion } from "framer-motion";
+
 export function Admin() {
   const [user, setUser] = useState<string>();
   const [password, setPassword] = useState<string>();
@@ -56,7 +59,10 @@ export function Admin() {
 
   return (
     <main className="min-h-height-full-16px min-w-ful flex-col bg-custom-blue-dark flex items-center justify-center m-auto">
-      <section
+      <motion.section
+        initial={{ x: "100%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         className="z-0 relative flex-col
        items-center justify-center m-auto max-w-96
         bg-white shadow-md shadow-black p-10"
@@ -121,7 +127,7 @@ export function Admin() {
             &#10095; Recuperar senha
           </a>{" "}
         </div>
-      </section>
+      </motion.section>
       {recover === true ? (
         <div
           className="absolute bg-custom-blue-dark min-h-height-full-16px

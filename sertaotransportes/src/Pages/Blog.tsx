@@ -10,6 +10,11 @@ import { useContext, useEffect, useState } from "react";
 //router
 import { Link } from "react-router-dom";
 
+//framemotion
+import { motion } from "framer-motion";
+//toast
+import toast from "react-hot-toast";
+
 export function NossoBlog() {
   const [dataPost, setPosts] = useState<any[]>([]);
   const { isSign } = useContext(AuthContext);
@@ -39,7 +44,7 @@ export function NossoBlog() {
     console.log("chamado delete", id);
     await deleteDoc(docRef)
       .then(() => {
-        console.log("excluido com sucesso");
+        toast.success("Excluido com sucesso!");
       })
       .catch((error) => {
         console.log(error);
@@ -84,7 +89,10 @@ export function NossoBlog() {
         >
           {dataPost.map((docs) => {
             return (
-              <section
+              <motion.section
+                initial={{ x: "100%", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
                 key={docs.uuid}
                 className="w-80 min-h-96 bg-white p-5 shadow-lg shadow-black mm:max-md:mt-10 "
               >
@@ -125,7 +133,7 @@ export function NossoBlog() {
                     Ler mais...
                   </button>
                 </Link>
-              </section>
+              </motion.section>
             );
           })}
         </div>
