@@ -48,16 +48,16 @@ export function Home() {
        text-white font-medium text-5xl
         flex items-center justify-start
         left-11 min-h-height-full-16px
-         z-0 mm:max-md:text-base
+         z-0 mm:max-md:text-sm
         mm:max-md:z-50 mm:max-md:w-60
-        mm:max-md:left-2
+        mm:max-md:left-2 mm:max-md:uppercase
+        mm:max-md:mt-48 mm:max-md:text-center
          "
         >
-          Empresa especializada <br /> em fornecer soluções de <br /> transporte
-          para diversas <br /> necessidades! <br />
-          <br />
-          Moderna frota de vans, <br /> micro-ônibus, ônibus, <br />
-          carros e máquinas.
+          empresa especializada em <br />
+          fornecer soluções de <br />
+          transporte para diversas <br />
+          necessidades
         </h1>
       </motion.div>
 
@@ -80,7 +80,7 @@ export function Home() {
           <div
             style={{ backgroundImage: `url(${triangulo2})` }}
             className="min-h-height-full-16px
-           bg-no-repeat w-1/2 flex 
+           bg-no-repeat flex w-1/2   
            drop-shadow-2xl bg-cover shadow-black  "
           ></div>
         ) : (
