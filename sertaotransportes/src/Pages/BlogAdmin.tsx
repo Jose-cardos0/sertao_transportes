@@ -8,6 +8,8 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../Services/Firebase";
 import toast from "react-hot-toast";
 //progress
+//motion
+import { motion } from "framer-motion";
 
 const api = "47fddb1bca09eb9ff57434ed38886699";
 
@@ -44,9 +46,10 @@ export function BlogAdmin() {
     uploadImage();
 
     if (!titulo || !textArea || !imageUrl) {
-      toast.error("Aguarde, imagem sendo enviada!");
+      const loading = toast.loading("Aguarde...!");
       await uploadImage();
-      toast.success("Imagem enviada, por favor, clique em ENVIAR");
+      toast.success("Imagem carregada, por favor, clique novamente em ENVIAR");
+      toast.dismiss(loading);
       return;
     }
 
@@ -95,11 +98,16 @@ export function BlogAdmin() {
   }
 
   return (
-    <main className="bg-custom-blue-dark w-full flex items-center justify-center m-auto min-h-height-full-16px">
-      <section className="w-11/12">
+    <main className="bg-custom-blue-dark w-full flex items-center justify-center m-auto min-h-height-full-16px overflow-hidden">
+      <motion.section
+        initial={{ x: "100%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="w-11/12"
+      >
         <form
           onSubmit={handleSubmit}
-          className="w-full p-5 bg-white flex-col items-center justify-center shadow-md shadow-black"
+          className="w-full p-5 bg-white flex-col items-center justify-center shadow-md shadow-black "
         >
           <div className="w-full flex-col">
             <div>
@@ -153,6 +161,7 @@ export function BlogAdmin() {
                 placeholder="Digite o título do post..."
                 value={titulo}
                 onChange={(e) => setTitulo(e.target.value)}
+                required
               />
             </label>
             <label>
@@ -164,6 +173,7 @@ export function BlogAdmin() {
                 placeholder="Digite aqui o conteúdo do post..."
                 value={textArea}
                 onChange={(e) => setTexArea(e.target.value)}
+                required
               />
             </label>
           </div>
@@ -174,7 +184,7 @@ export function BlogAdmin() {
             Enviar
           </button>
         </form>
-      </section>
+      </motion.section>
     </main>
   );
 }

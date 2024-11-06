@@ -3,20 +3,11 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { db } from "../Services/Firebase";
 
-// const [titulo, setTitulo] = useState<string>();
-// const [img, setImg] = useState<string | null>(null);
-// const [textArea, setTexArea] = useState<string>();
-// const [image, setImage] = useState<File | null>(null);
-// const [imageUrl, setImageUrl] = useState<string | null>(null);
-
-interface dataProps {
-  uuid: string;
-  titulo: string;
-  conteudo: string;
-  imagem: string;
-}
 //icons
 import { MdKeyboardReturn } from "react-icons/md";
+
+//framotion
+import { motion } from "framer-motion";
 
 export function PostDeatil() {
   const { id } = useParams();
@@ -59,8 +50,17 @@ export function PostDeatil() {
      items-center justify-center p-5"
     >
       {post && (
-        <div className="w-2/3 mt-6 shadow-md shadow-black mm:max-md:w-full ">
-          <div className="p-5 bg-white mm:max-md:w-full">
+        <div className="w-2/3 mt-6  mm:max-md:w-full ">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+            className="p-5 bg-white mm:max-md:w-full shadow-md shadow-black"
+          >
             <div
               className="flex items-center
              justify-between mb-5"
@@ -93,7 +93,7 @@ export function PostDeatil() {
             <p className="font-extralight text-gray-400 text-sm">
               {FormatTime(post?.data)}
             </p>
-          </div>
+          </motion.div>
         </div>
       )}
     </main>
