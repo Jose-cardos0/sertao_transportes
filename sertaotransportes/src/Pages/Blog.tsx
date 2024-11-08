@@ -61,24 +61,26 @@ export function NossoBlog() {
       <div className=" flex-col items-center justify-center mb-28">
         {dataPost.length < 1 ? (
           <div className="text-white text-2xl text-center font-righ">
-            Sem posts
+            Carregando...
           </div>
         ) : (
           <div className="flex-col items-center justify-center">
             {isSign === true ? (
-              <button
-                className="flex w-full items-center justify-center py-2 px-4 bg-white
+              <div className="w-full flex items-center justify-center">
+                <button
+                  className="flex items-center justify-center py-2 px-4 bg-white
                rounded-lg font-bold text-custom-blue-dark
-                shadow-md shadow-black
+                shadow-md shadow-black mm:max-md:w-full
                  hover:bg-custom-blue-dark transition duration-300 hover:text-white mm:max-md:mt-5"
-              >
-                <Link to={"/blog-admin"}>+ Post</Link>
-              </button>
+                >
+                  <Link to={"/blog-admin"}>+ Post</Link>
+                </button>
+              </div>
             ) : (
               ""
             )}
             <p className="text-white text-2xl text-center font-righ mt-10 mm:max-md:mt-10 mb-10 mm:max-md:mb-0">
-              Lidta de publicações
+              Lista de publicações
             </p>
           </div>
         )}

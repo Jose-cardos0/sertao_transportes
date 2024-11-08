@@ -8,6 +8,9 @@ import triangulo2 from "../assets/home/trangulo2.png";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+//paginas
+import { NossoBlog } from "./Blog";
+
 export function Home() {
   const [widthViwer, setWidth] = useState(false);
 
@@ -33,18 +36,26 @@ export function Home() {
       className=" min-h-height-full-16px 
       min-w-full bg-cover
       bg-no-repeat
-      bg-center flex
+      bg-center flex-col
       overflow-y-hidden
        overflow-x-hidden "
     >
-      <motion.div
-        initial={{ x: "100%", opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className="flex relative z-0 "
+      <div
+        className=" min-h-height-full-16px 
+      min-w-full bg-cover
+      bg-no-repeat
+      bg-center flex
+      overflow-y-hidden
+       overflow-x-hidden "
       >
-        <h1
-          className="absolute w-screen
+        <motion.div
+          initial={{ x: "100%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="flex relative z-0 "
+        >
+          <h1
+            className="absolute w-screen
        text-white font-medium text-5xl
         flex items-center justify-start
         left-11 min-h-height-full-16px
@@ -53,45 +64,49 @@ export function Home() {
         mm:max-md:left-2 mm:max-md:uppercase
         mm:max-md:mt-48 mm:max-md:text-center
          "
-        >
-          empresa especializada em <br />
-          fornecer soluções de <br />
-          transporte para diversas <br />
-          necessidades
-        </h1>
-      </motion.div>
+          >
+            empresa especializada em <br />
+            fornecer soluções de <br />
+            transporte para diversas <br />
+            necessidades
+          </h1>
+        </motion.div>
 
-      <div
-        style={{ backgroundImage: `url(${artOct})` }}
-        className="min-h-height-full-16px
+        <div
+          style={{ backgroundImage: `url(${artOct})` }}
+          className="min-h-height-full-16px
          bg-cover bg-no-repeat w-full flex
           items-center mm:max-md:hidden "
-      ></div>
+        ></div>
 
-      <motion.div
-        initial={{ x: "200%", opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="min-h-height-full-16px
+        <motion.div
+          initial={{ x: "200%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+          className="min-h-height-full-16px
            bg-no-repeat w-full flex 
            drop-shadow-2xl justify-end"
-      >
-        {widthViwer === true ? (
-          <div
-            style={{ backgroundImage: `url(${triangulo2})` }}
-            className="min-h-height-full-16px
+        >
+          {widthViwer === true ? (
+            <div
+              style={{ backgroundImage: `url(${triangulo2})` }}
+              className="min-h-height-full-16px
            bg-no-repeat flex w-1/2   
            drop-shadow-2xl bg-cover shadow-black  "
-          ></div>
-        ) : (
-          <div
-            style={{ backgroundImage: `url(${triangleCars})` }}
-            className="min-h-height-full-16px
+            ></div>
+          ) : (
+            <div
+              style={{ backgroundImage: `url(${triangleCars})` }}
+              className="min-h-height-full-16px
          bg-no-repeat w-1/2 flex 
          drop-shadow-2xl bg-cover  "
-          ></div>
-        )}
-      </motion.div>
+            ></div>
+          )}
+        </motion.div>
+      </div>
+      <div>
+        <NossoBlog />
+      </div>
     </main>
   );
 }
