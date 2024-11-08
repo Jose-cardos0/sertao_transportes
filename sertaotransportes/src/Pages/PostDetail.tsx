@@ -84,11 +84,13 @@ export function PostDeatil() {
                 </button>
               </Link>
             </div>
-            <img
-              className="rounded-md shadow-md shadow-black mb-7"
-              src={post?.img}
-              alt=""
-            />
+            <div className="w-full flex items-center justify-center">
+              <img
+                className="rounded-md shadow-md shadow-black mb-7 max-w-96 mm:max-md:w-full  "
+                src={post?.img}
+                alt=""
+              />
+            </div>
             <p className="font-thin mb-5">{post?.conteudo}</p>
             <p className="font-extralight text-gray-400 text-sm">
               {FormatTime(post?.data)}

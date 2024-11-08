@@ -30,9 +30,6 @@ export function Home() {
 
   return (
     <main
-      style={{
-        backgroundImage: `url(${bgEstradaHome})`,
-      }}
       className=" min-h-height-full-16px 
       min-w-full bg-cover
       bg-no-repeat
@@ -41,6 +38,9 @@ export function Home() {
        overflow-x-hidden "
     >
       <div
+        style={{
+          backgroundImage: `url(${bgEstradaHome})`,
+        }}
         className=" min-h-height-full-16px 
       min-w-full bg-cover
       bg-no-repeat
@@ -62,10 +62,10 @@ export function Home() {
          z-0 mm:max-md:text-sm
         mm:max-md:z-50 mm:max-md:w-60
         mm:max-md:left-2 mm:max-md:uppercase
-        mm:max-md:mt-48 mm:max-md:text-center
+         mm:max-md:text-center
          "
           >
-            empresa especializada em <br />
+            Empresa especializada em <br />
             fornecer soluções de <br />
             transporte para diversas <br />
             necessidades
